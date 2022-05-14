@@ -8,6 +8,10 @@ module.exports = {
 			fontFamily: {
 				nav: ["Roboto Mono", "monospace"],
 			},
+			colors: {
+				primary: "#11171e",
+				whiteish: "#fffefa",
+			},
 		},
 	},
 	plugins: [],

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Header() {
 	return (
-		<header className="fixed top-0 left-0 w-full px-4 font-nav">
+		<header className="fixed top-0 left-0 w-full px-4 font-nav text-whiteish">
 			<div className="mx-auto my-0 flex h-12 max-w-7xl items-center justify-between">
 				<div className=" text-xl">Placeholder</div>
 				<nav className="flex items-center">
@@ -31,12 +31,17 @@ export default function Header() {
 							<Link
 								href="https://www.linkedin.com/in/vlad-dragoi/"
 								title="My LinkedIn Profile"
+								target="_blank"
 							>
 								linkedin
 							</Link>
 						</li>
 						<li>
-							<Link href="https://github.com/airdgo" title="My GitHub Page">
+							<Link
+								href="https://github.com/airdgo"
+								title="My GitHub Page"
+								target="_blank"
+							>
 								github
 							</Link>
 						</li>
