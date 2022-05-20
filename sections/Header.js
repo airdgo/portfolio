@@ -1,30 +1,26 @@
 import Link from "next/link";
+import { GithubIcon, LinkedInIcon } from "../icons/index";
 
 export default function Header() {
 	return (
-		<header className="fixed top-0 left-0 w-full px-4 font-nav text-whiteish">
-			<div className="mx-auto my-0 flex h-12 max-w-7xl items-center justify-between">
-				<div className=" text-xl">Placeholder</div>
-				<nav className="flex items-center">
-					<ul className="flex items-center gap-4">
+		<header className="fixed top-0 left-0 w-full fill-primary2 px-32 font-primary text-primary2">
+			<div className="mx-auto my-0 flex h-16 max-w-7xl items-center justify-between">
+				<div className="text-xl">PLACEHOLDER</div>
+				<nav className="flex items-center font-medium">
+					<ul className="flex items-center gap-8">
 						<li>
-							<Link href="/" title="Home">
-								.is()
+							<Link href="/about" title="About me">
+								ABOUT
 							</Link>
 						</li>
 						<li>
 							<Link href="/projects" title="Projects">
-								.projects()
-							</Link>
-						</li>
-						<li>
-							<Link href="/about" title="About me">
-								.about()
+								PROJECTS
 							</Link>
 						</li>
 						<li>
 							<Link href="/contact" title="Send me an email">
-								.contact()
+								CONTACT
 							</Link>
 						</li>
 						<li>
@@ -33,7 +29,9 @@ export default function Header() {
 								title="My LinkedIn Profile"
 								target="_blank"
 							>
-								linkedin
+								<a>
+									<LinkedInIcon />
+								</a>
 							</Link>
 						</li>
 						<li>
@@ -42,7 +40,9 @@ export default function Header() {
 								title="My GitHub Page"
 								target="_blank"
 							>
-								github
+								<a>
+									<GithubIcon />
+								</a>
 							</Link>
 						</li>
 					</ul>
