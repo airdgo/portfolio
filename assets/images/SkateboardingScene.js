@@ -1,8 +1,8 @@
 export default function SkateboardingScene({ ...props }) {
 	return (
 		<svg
-			width="674"
-			height="440"
+			width="currentWidth"
+			height="currentHeight"
 			viewBox="0 0 674 440"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

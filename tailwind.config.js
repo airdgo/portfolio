@@ -15,6 +15,7 @@ module.exports = {
 				dashboard: "#6219FA",
 				primary: "#11171E",
 				primary2: "#FFFEFA",
+				accent1: "#FFAE63",
 			},
 		},
 	},
