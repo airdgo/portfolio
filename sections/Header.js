@@ -3,8 +3,8 @@ import { GithubIcon, LinkedInIcon } from "../icons/index";
 
 export default function Header() {
 	return (
-		<header className="fixed top-0 left-0 w-full fill-primary2 px-32 font-primary text-primary2">
-			<div className="mx-auto my-0 flex h-16 max-w-7xl items-center justify-between">
+		<header className="fixed top-0 left-0 z-10 w-full fill-primary2 font-primary text-primary2">
+			<div className="mx-auto my-0 flex h-16 w-[80%] max-w-7xl items-center justify-between">
 				<div className="text-xl">PLACEHOLDER</div>
 				<nav className="flex items-center font-medium">
 					<ul className="flex items-center gap-8">
