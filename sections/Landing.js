@@ -10,7 +10,7 @@ export default function Landing() {
 						Developer
 					</h1>
 
-					<h2 className="mt-32 w-[40vw] text-lg text-primary2 sm:w-full sm:text-center sm:text-2xl lg:text-3xl xl:mt-44 xl:text-left">
+					<h2 className="mt-32 text-center text-lg text-primary2 sm:w-full sm:text-center sm:text-2xl lg:text-3xl xl:mt-44 xl:text-left">
 						And also a sports enthusiast
 					</h2>
 				</div>
