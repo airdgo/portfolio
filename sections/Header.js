@@ -17,7 +17,7 @@ export default function Header() {
 			<nav className="mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="flex h-16 w-full items-center justify-between">
 					<div className="text-xl">
-						<Link href="/" title="Home">
+						<Link href="#landing" scroll={true} title="Home">
 							Home
 						</Link>
 					</div>
@@ -33,17 +33,17 @@ export default function Header() {
 					}
 				>
 					<li>
-						<Link href="/about" title="About me">
+						<Link href="#about" title="About me">
 							ABOUT
 						</Link>
 					</li>
 					<li>
-						<Link href="/projects" title="Projects">
+						<Link href="#projects" title="Projects">
 							PROJECTS
 						</Link>
 					</li>
 					<li>
-						<Link href="/contact" title="Send me an email">
+						<Link href="#contact" title="Send me an email">
 							CONTACT
 						</Link>
 					</li>
