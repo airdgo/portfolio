@@ -1,29 +1,33 @@
 import Link from "next/link";
-import { GithubIcon, LinkedInIcon, ToggleMenuIcon } from "../icons/index";
+import { GithubIcon, LinkedInIcon } from "../icons/index";
 import { useState } from "react";
+import { navigation } from "../constants/index";
+import HamburgerMenu from "../components/HamburgerMenu";
 
 export default function Header() {
-	const [menuToggled, setMenuToggled] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
 	function toggleMenu() {
-		setMenuToggled((prevState) => !prevState);
+		setIsOpen((prevState) => !prevState);
 	}
-	console.log(menuToggled);
 
-	const dropedDown = menuToggled ? "flex" : "hidden";
+	function hideMenu() {
+		if (isOpen === false) return;
+		setIsOpen(false);
+	}
+
+	const dropedDown = isOpen ? "flex" : "hidden";
 
 	return (
-		<header className="fixed top-0 left-0 z-30 w-full bg-neutral fill-primary2 font-primary text-primary2 transition-colors ease-out lg:bg-transparent">
+		<header className="fixed top-0 left-0 z-30 w-full bg-neutral font-primary text-primary2 transition-colors ease-out lg:bg-transparent">
 			<nav className="mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="flex h-16 w-full items-center justify-between">
 					<div className="text-xl">
-						<Link href="#landing" scroll={true} title="Home">
+						<Link href="#landing" title="Home">
 							Home
 						</Link>
 					</div>
-					<button className="lg:hidden" onClick={toggleMenu}>
-						<ToggleMenuIcon />
-					</button>
+					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 				</div>
 
 				<ul
@@ -32,21 +36,14 @@ export default function Header() {
 						dropedDown
 					}
 				>
-					<li>
-						<Link href="#about" title="About me">
-							ABOUT
-						</Link>
-					</li>
-					<li>
-						<Link href="#projects" title="Projects">
-							PROJECTS
-						</Link>
-					</li>
-					<li>
-						<Link href="#contact" title="Send me an email">
-							CONTACT
-						</Link>
-					</li>
+					{navigation.map((nav) => (
+						<li key={nav.title} onClick={hideMenu}>
+							<Link href={nav.link} title={nav.title}>
+								{nav.content}
+							</Link>
+						</li>
+					))}
+
 					<li className="flex w-full justify-between lg:gap-16">
 						<Link
 							href="https://www.linkedin.com/in/vlad-dragoi/"
