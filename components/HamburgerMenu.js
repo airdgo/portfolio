@@ -4,22 +4,22 @@ export default function HamburgerMenu({ onClick, isOpen }) {
 			<span
 				aria-hidden="true"
 				className={
-					"absolute block h-[0.2rem] w-8 transform bg-current transition duration-500 ease-in-out " +
-					(isOpen ? "rotate-45" : "-translate-y-3")
+					"absolute block h-[0.1rem] w-6 transform bg-current transition duration-500 ease-in-out " +
+					(isOpen ? "rotate-45" : "-translate-y-2")
 				}
 			></span>
 			<span
 				aria-hidden="true"
 				className={
-					"absolute block h-[0.2rem] w-8 transform bg-current transition duration-500 ease-in-out " +
+					"absolute block h-[0.1rem] w-6 transform bg-current transition duration-500 ease-in-out " +
 					(isOpen && "opacity-0")
 				}
 			></span>
 			<span
 				aria-hidden="true"
 				className={
-					"absolute block h-[0.2rem] w-8 transform bg-current transition duration-500 ease-in-out " +
-					(isOpen ? "-rotate-45" : "translate-y-3")
+					"absolute block h-[0.1rem] w-6 transform bg-current transition duration-500 ease-in-out " +
+					(isOpen ? "-rotate-45" : "translate-y-2")
 				}
 			></span>
 		</button>
