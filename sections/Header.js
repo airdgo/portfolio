@@ -1,11 +1,16 @@
 import Link from "next/link";
-import { GithubIcon, LinkedInIcon } from "../icons/index";
 import { useState } from "react";
-import { navigation } from "../constants/index";
+import { desktopNavigation } from "../constants/index";
 import HamburgerMenu from "../components/HamburgerMenu";
+import { useTransition, animated } from "@react-spring/web";
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
+	const transitions = useTransition(isOpen, {
+		from: { x: 0, y: -500, opacity: 0 },
+		enter: { x: 0, y: 0, opacity: 1 },
+		leave: { x: 0, y: -500, opacity: 0 },
+	});
 
 	function toggleMenu() {
 		setIsOpen((prevState) => !prevState);
@@ -15,8 +20,6 @@ export default function Header() {
 		if (isOpen === false) return;
 		setIsOpen(false);
 	}
-
-	const dropedDown = isOpen ? "flex" : "hidden";
 
 	return (
 		<header
@@ -35,13 +38,38 @@ export default function Header() {
 					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 				</div>
 
-				<ul
-					className={
-						"h-screen flex-col items-center justify-center gap-16 pb-40 text-3xl lg:flex lg:h-auto lg:flex-row lg:p-0 lg:text-lg " +
-						dropedDown
-					}
-				>
-					{navigation.map((nav) => (
+				{/* {isOpen && (
+					<ul className="fixed flex h-screen flex-col items-center justify-center gap-16 bg-neutral pb-40 text-3xl lg:hidden">
+						{desktopNavigation.map((nav) => (
+							<li key={nav.title} onClick={hideMenu}>
+								<Link href={nav.link} title={nav.title}>
+									{nav.content}
+								</Link>
+							</li>
+						))}
+					</ul>
+				)} */}
+
+				{transitions(
+					(style, item) =>
+						item && (
+							<animated.ul
+								style={style}
+								className="fixed flex h-screen flex-col items-center justify-center gap-16 bg-neutral pb-40 text-3xl lg:hidden"
+							>
+								{desktopNavigation.map((nav) => (
+									<li key={nav.title} onClick={hideMenu}>
+										<Link href={nav.link} title={nav.title}>
+											{nav.content}
+										</Link>
+									</li>
+								))}
+							</animated.ul>
+						)
+				)}
+
+				<ul className="hidden h-auto items-center justify-center gap-16 text-lg lg:static lg:flex">
+					{desktopNavigation.map((nav) => (
 						<li key={nav.title} onClick={hideMenu}>
 							<Link href={nav.link} title={nav.title}>
 								{nav.content}
@@ -49,7 +77,7 @@ export default function Header() {
 						</li>
 					))}
 
-					<li className="flex w-full items-center justify-between lg:gap-16">
+					{/* <li className="flex w-full items-center justify-between lg:gap-16">
 						<Link
 							href="https://www.linkedin.com/in/vlad-dragoi/"
 							title="My LinkedIn Profile"
@@ -63,7 +91,7 @@ export default function Header() {
 								<GithubIcon />
 							</a>
 						</Link>
-					</li>
+					</li> */}
 				</ul>
 			</nav>
 		</header>

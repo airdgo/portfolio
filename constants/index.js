@@ -1,3 +1,3 @@
-import { navigation } from "./navigation";
+import { desktopNavigation } from "./navigation";
 
-export { navigation };
+export { desktopNavigation };
