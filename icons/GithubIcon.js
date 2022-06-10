@@ -1,4 +1,4 @@
-export default function GithubIcon({ ...props }) {
+export default function GithubIcon() {
 	return (
 		<svg
 			width="100%"
