@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { navigation, externalLinks } from "../constants/index";
+import { navigation, externalLinks } from "../constants";
 import HamburgerMenu from "../components/HamburgerMenu";
 import { useTransition, animated } from "@react-spring/web";
 import { useScrollPosition } from "../hooks";
