@@ -4,7 +4,7 @@ export default function Landing() {
 	return (
 		<section
 			id="landing"
-			className="relative flex h-screen w-full snap-start justify-center overflow-hidden bg-dashboard xl:items-center"
+			className="relative flex min-h-screen w-full snap-start justify-center overflow-auto bg-dashboard xl:items-center"
 		>
 			<div className="relative mt-40 flex max-h-[60rem] w-[80%] max-w-7xl flex-col items-center justify-between text-primary2 sm:mt-60 xl:mt-32 xl:flex-row xl:items-start">
 				<div>

@@ -3,9 +3,15 @@ import { useState } from "react";
 import { navigation, externalLinks } from "../constants/index";
 import HamburgerMenu from "../components/HamburgerMenu";
 import { useTransition, animated } from "@react-spring/web";
+import { useScrollPosition } from "../hooks";
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
+	const scrollPosition = useScrollPosition();
+	console.log(scrollPosition);
+
+	const [navBg, setNavBg] = useState("lg:bg-transparent");
+
 	const transitions = useTransition(isOpen, {
 		from: { x: 0, y: -500, opacity: 0 },
 		enter: { x: 0, y: 0, opacity: 1 },
@@ -21,11 +27,27 @@ export default function Header() {
 		setIsOpen(false);
 	}
 
+	function changeNavBg() {
+		console.log(window.scrollY);
+		if (window.scrollY >= 600) {
+			setNavBg("lg:bg-red-200");
+		} else if (window.scrollY >= 400) {
+			setNavBg("lg:bg-green-200");
+		} else if (window.scrollY >= 200) {
+			setNavBg("lg:bg-blue-200");
+		} else {
+			setNavBg("lg:bg-dashboard");
+		}
+
+		// window.scrollY >= 800 ? setNavBg(true) : setNavBg(false);
+	}
+
 	return (
 		<header
 			className={
-				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors ease-out lg:bg-transparent " +
-				(isOpen ? "opacity-100" : "opacity-95")
+				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors duration-[850ms] ease-in-out " +
+				(isOpen ? "opacity-100" : "opacity-95 ") +
+				navBg
 			}
 		>
 			<nav className="relative mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
@@ -55,7 +77,7 @@ export default function Header() {
 
 								<li className="flex w-full max-w-[10rem] items-center justify-between lg:gap-16">
 									{externalLinks.map((nav) => (
-										<Link href={nav.link} title={nav.title}>
+										<Link key={nav.title} href={nav.link} title={nav.title}>
 											{nav.content}
 										</Link>
 									))}
