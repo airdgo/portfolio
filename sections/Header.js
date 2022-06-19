@@ -8,10 +8,6 @@ import { useScrollPosition } from "../hooks";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const scrollPosition = useScrollPosition();
-	console.log(scrollPosition);
-
-	const [navBg, setNavBg] = useState("lg:bg-transparent");
-
 	const transitions = useTransition(isOpen, {
 		from: { x: 0, y: -500, opacity: 0 },
 		enter: { x: 0, y: 0, opacity: 1 },
@@ -27,28 +23,17 @@ export default function Header() {
 		setIsOpen(false);
 	}
 
-	function changeNavBg() {
-		console.log(window.scrollY);
-		if (window.scrollY >= 600) {
-			setNavBg("lg:bg-red-200");
-		} else if (window.scrollY >= 400) {
-			setNavBg("lg:bg-green-200");
-		} else if (window.scrollY >= 200) {
-			setNavBg("lg:bg-blue-200");
-		} else {
-			setNavBg("lg:bg-dashboard");
-		}
-
-		// window.scrollY >= 800 ? setNavBg(true) : setNavBg(false);
+	function classNames(...classes) {
+		return classes.filter(Boolean).join(" ");
 	}
 
 	return (
 		<header
-			className={
-				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors duration-[850ms] ease-in-out " +
-				(isOpen ? "opacity-100" : "opacity-95 ") +
-				navBg
-			}
+			className={classNames(
+				isOpen ? "opacity-100" : "opacity-95",
+				scrollPosition >= 80 ? "lg:bg-neutralDark" : "lg:bg-transparent",
+				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors duration-[850ms] ease-in-out"
+			)}
 		>
 			<nav className="relative mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
