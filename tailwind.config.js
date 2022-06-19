@@ -4,6 +4,7 @@ module.exports = {
 		"./components/**/*.{js,ts,jsx,tsx}",
 		"./layout/**/*.{js,ts,jsx,tsx}",
 		"./sections/**/*.{js,ts,jsx,tsx}",
+		"./constants/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 		extend: {
@@ -16,6 +17,8 @@ module.exports = {
 				primary: "#11171E",
 				primary2: "#FFFEFA",
 				accent1: "#FFAE63",
+				neutral: "#1C1942",
+				neutralDark: "#2d3338",
 			},
 		},
 	},
