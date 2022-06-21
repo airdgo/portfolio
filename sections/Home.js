@@ -17,7 +17,7 @@ export default function Home() {
 						And also a sports enthusiast
 					</h2>
 				</div>
-				<div className="relative w-full max-w-xl">
+				<div className="relative mt-14 w-full max-w-xl">
 					<SkateboardingScene className="relative z-10 h-full w-full" />
 				</div>
 				<hr className="absolute bottom-3 left-0 w-full sm:bottom-5 sm:border" />
