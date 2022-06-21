@@ -1,9 +1,9 @@
 import SkateboardingScene from "../assets/images/SkateboardingScene";
 
-export default function Landing() {
+export default function Home() {
 	return (
 		<section
-			id="landing"
+			id="home"
 			className="relative flex min-h-screen w-full snap-start justify-center overflow-auto bg-dashboard xl:items-center"
 		>
 			<div className="relative mt-40 flex max-h-[60rem] w-[80%] max-w-7xl flex-col items-center justify-between text-primary2 sm:mt-60 xl:mt-32 xl:flex-row xl:items-start">

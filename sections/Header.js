@@ -38,7 +38,7 @@ export default function Header() {
 			<nav className="relative mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
 					<div className="text-lg md:text-xl" onClick={hideMenu}>
-						<Link href="#landing" title="Home">
+						<Link href="#home" title="Home">
 							HOME
 						</Link>
 					</div>

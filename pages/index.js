@@ -1,13 +1,13 @@
 import Layout from "../layout/Layout";
-import Landing from "../sections/Landing";
+import Home from "../sections/Home";
 import About from "../sections/About";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
 
-export default function Home() {
+export default function App() {
 	return (
 		<Layout>
-			<Landing />
+			<Home />
 			<About />
 			<Projects />
 			<Contact />
