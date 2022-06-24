@@ -1,10 +1,15 @@
-import AboutDivider2 from "../assets/images/AboutDivider2";
+import AboutDivider from "../assets/images/AboutDivider";
 
 export default function About() {
 	return (
-		<section id="about">
-			<div className="h-screen w-full snap-start bg-primary">About</div>
-			<AboutDivider2 />
-		</section>
+		<>
+			<section id="about" className="h-screen w-full snap-start bg-primary">
+				<div>About</div>
+			</section>
+
+			<section>
+				<AboutDivider />
+			</section>
+		</>
 	);
 }

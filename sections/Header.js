@@ -30,7 +30,7 @@ export default function Header() {
 				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors duration-[850ms] ease-in-out"
 			)}
 		>
-			<nav className="relative mx-auto my-0 flex h-full w-[80%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
+			<nav className="relative mx-auto my-0 flex h-full w-[85%] max-w-7xl flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
 					<div className="text-lg md:text-xl" onClick={hideMenu}>
 						<Link href="#home" title="Home">

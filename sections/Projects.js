@@ -1,10 +1,14 @@
-import ProjectsDivider2 from "../assets/images/ProjectsDivider2";
+import ProjectsDivider from "../assets/images/ProjectsDivider";
 
 export default function Projects() {
 	return (
-		<section id="projects">
-			<div className="h-screen w-full snap-start bg-primary2">Projects</div>
-			<ProjectsDivider2 />
-		</section>
+		<>
+			<section id="projects" className="h-screen w-full snap-start bg-primary2">
+				<div>Projects</div>
+			</section>
+			<section>
+				<ProjectsDivider />
+			</section>
+		</>
 	);
 }
