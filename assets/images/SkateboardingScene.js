@@ -1,4 +1,4 @@
-export default function SkateboardingScene({ ...props }) {
+export default function SkateboardingScene({ hLine, ...props }) {
 	return (
 		<svg
 			width="100%"
@@ -8,6 +8,11 @@ export default function SkateboardingScene({ ...props }) {
 			xmlns="http://www.w3.org/2000/svg"
 			{...props}
 		>
+			<path
+				d="M674 415C674 415.552 673.672 416 673.269 416H0V414H673.269C673.672 414 674 414.448 674 415V415Z"
+				fill="#E6E6E6"
+				className={hLine}
+			/>
 			<path
 				d="M415.248 313.75C419.576 313.75 423.085 310.24 423.085 305.91C423.085 301.579 419.576 298.069 415.248 298.069C410.92 298.069 407.411 301.579 407.411 305.91C407.411 310.24 410.92 313.75 415.248 313.75Z"
 				fill="#3F3D56"
