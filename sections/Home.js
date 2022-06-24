@@ -22,7 +22,7 @@ export default function Home() {
 							And also a sports enthusiast
 						</h2>
 					</div>
-					<div className="relative mt-14 w-[70%] max-w-2xl xl:mt-0 xl:self-end">
+					<div className="relative mt-14 max-w-xl xl:mt-0 xl:w-[70%] xl:max-w-2xl xl:self-end">
 						<SkateboardingScene
 							className="relative z-10 h-full w-full"
 							hLine="xl:hidden"
