@@ -1,4 +1,4 @@
-import ContactDivider from "../assets/images/ContactDivider";
+import ContactDivider from "../assets/sectionDividers/ContactDivider";
 export default function Contact() {
 	return (
 		<>

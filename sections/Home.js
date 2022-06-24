@@ -1,4 +1,4 @@
-import HomeDivider from "../assets/images/HomeDivider";
+import HomeDivider from "../assets/sectionDividers/HomeDivider";
 import SkateboardingScene from "../assets/images/SkateboardingScene";
 
 export default function Home() {

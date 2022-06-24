@@ -1,4 +1,4 @@
-import ProjectsDivider from "../assets/images/ProjectsDivider";
+import ProjectsDivider from "../assets/sectionDividers/ProjectsDivider";
 
 export default function Projects() {
 	return (
