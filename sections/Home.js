@@ -8,7 +8,7 @@ export default function Home() {
 				id="home"
 				className="relative flex min-h-screen w-full justify-center overflow-auto bg-dashboard xl:items-center"
 			>
-				<div className="relative mt-40 flex max-h-[60rem] w-[85%] max-w-7xl flex-col items-center justify-around text-primary2 lg:justify-between xl:mt-32 xl:flex-row xl:items-start">
+				<div className="relative mt-40 flex max-h-[60rem] w-[85%] max-w-[90rem] flex-col items-center justify-around text-primary2 lg:justify-between xl:mt-32 xl:flex-row xl:items-start">
 					<div>
 						<h1 className="text-center text-3xl font-bold sm:text-4xl md:text-5xl md:leading-normal xl:text-left">
 							Hi, I'm Vlad. <br /> A
@@ -21,9 +21,8 @@ export default function Home() {
 					</div>
 					<div className="relative mt-14 w-full max-w-xl">
 						<SkateboardingScene className="relative z-10 h-full w-full" />
-						<hr className="absolute bottom-3 left-0 w-full sm:bottom-5 sm:border" />
 					</div>
-					<hr className="absolute bottom-3 left-0 hidden w-full sm:bottom-5 sm:border xl:block" />
+					<hr className="absolute bottom-3 left-0 hidden w-full bg-primary2 sm:bottom-5 sm:border xl:block" />
 				</div>
 			</section>
 			<section>
