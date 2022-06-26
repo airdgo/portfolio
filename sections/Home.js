@@ -1,13 +1,11 @@
 import HomeDivider from "../assets/sectionDividers/HomeDivider";
 import SkateboardingScene from "../assets/images/SkateboardingScene";
+import Section from "../components/Section";
 
 export default function Home() {
 	return (
 		<>
-			<section
-				id="home"
-				className="relative flex min-h-screen w-full justify-center overflow-auto bg-dashboard xl:items-center"
-			>
+			<Section id="home" addClass="xl:items-center" bgColor="bg-dashboard">
 				<div className="relative mt-28 flex max-h-[60rem] w-[85%] max-w-[90rem] flex-col items-center justify-around text-primary2 lg:justify-between xl:mt-32 xl:flex-row">
 					<div className="xl:w-[70%]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal xl:text-left">
@@ -30,7 +28,7 @@ export default function Home() {
 					</div>
 					<hr className="absolute bottom-3 left-0 hidden w-full border-2 bg-primary2 sm:bottom-[1.35rem] xl:block" />
 				</div>
-			</section>
+			</Section>
 			<section>
 				<HomeDivider />
 			</section>
