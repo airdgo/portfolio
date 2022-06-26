@@ -4,6 +4,7 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import { useScrollPosition } from "../hooks";
 import DesktopNav from "../components/DesktopNav";
 import MobileNav from "../components/MobileNav";
+import { classNames } from "../utils/index";
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,6 @@ export default function Header() {
 	function hideMenu() {
 		if (isOpen === false) return;
 		setIsOpen(false);
-	}
-
-	function classNames(...classes) {
-		return classes.filter(Boolean).join(" ");
 	}
 
 	return (

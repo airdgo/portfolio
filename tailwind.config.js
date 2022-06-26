@@ -1,4 +1,7 @@
 module.exports = {
+	future: {
+		hoverOnlyWhenSupported: true,
+	},
 	content: [
 		"./pages/**/*.{js,ts,jsx,tsx}",
 		"./components/**/*.{js,ts,jsx,tsx}",
@@ -17,8 +20,10 @@ module.exports = {
 				primary: "#11171E",
 				primary2: "#FFFEFA",
 				accent1: "#FFAE63",
+				accent2: "#FF6584",
 				neutral: "#1C1942",
 				neutralDark: "#2d3338",
+				neutralLight: "#808080",
 			},
 		},
 	},
