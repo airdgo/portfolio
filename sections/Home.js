@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<>
 			<Section id="home" addClass="xl:items-center" bgColor="bg-dashboard">
-				<Container addClass="flex-col items-center justify-around lg:justify-between xl:flex-row">
+				<Container addClass="flex-col items-center justify-around lg:justify-between xl:flex-row sm:mt-16 xl:mt-0">
 					<div className="xl:w-[70%]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal xl:text-left">
 							<h1>Hi, I'm Vlad.</h1>
