@@ -8,7 +8,7 @@ export default function Home() {
 		<>
 			<Section id="home" addClass="lg:items-center" bgColor="bg-dashboard">
 				<Container addClass="flex-col items-center justify-around lg:justify-between lg:flex-row sm:mt-16 lg:mt-0">
-					<div className="lg:w-[70%] lg:min-w-[30rem]">
+					<div className="lg:min-w-[30rem]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal lg:text-left">
 							<h1>Hi, I'm Vlad.</h1>
 							<h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-normal">
