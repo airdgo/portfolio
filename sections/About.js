@@ -2,12 +2,13 @@ import MountainScene from "../assets/images/MountainScene";
 import AboutDivider from "../assets/sectionDividers/AboutDivider";
 import { DownloadIcon } from "../icons/index";
 import Section from "../components/Section";
+import Container from "../components/Container";
 
 export default function About() {
 	return (
 		<>
 			<Section id="about" addClass="xl:items-center" bgColor="bg-primary">
-				<div className="flex min-h-full w-[85%] max-w-[90rem] flex-col xl:max-h-[30rem] xl:flex-row xl:justify-between">
+				<Container addClass="flex-col xl:max-h-[30rem] xl:flex-row xl:justify-between">
 					<div className="flex min-h-full flex-col items-center justify-around xl:items-start xl:justify-between">
 						<h1 className="text-center text-4xl font-bold sm:text-4xl md:text-7xl">
 							ABOUT
@@ -44,7 +45,7 @@ export default function About() {
 					<div className="hidden w-full max-w-2xl xl:block">
 						<MountainScene />
 					</div>
-				</div>
+				</Container>
 			</Section>
 
 			<section>

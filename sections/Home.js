@@ -1,18 +1,19 @@
 import HomeDivider from "../assets/sectionDividers/HomeDivider";
 import SkateboardingScene from "../assets/images/SkateboardingScene";
 import Section from "../components/Section";
+import Container from "../components/Container";
 
 export default function Home() {
 	return (
 		<>
 			<Section id="home" addClass="xl:items-center" bgColor="bg-dashboard">
-				<div className="relative flex max-h-[60rem] w-[85%] max-w-[90rem] flex-col items-center justify-around  lg:justify-between xl:flex-row">
+				<Container addClass="flex-col items-center justify-around lg:justify-between xl:flex-row">
 					<div className="xl:w-[70%]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal xl:text-left">
 							<h1>Hi, I'm Vlad.</h1>
 							<h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-normal">
 								A <span className="text-accent1"> Frontend </span>
-								<span className="inline-block">Web Developer</span>
+								Developer
 							</h2>
 						</div>
 
@@ -27,7 +28,7 @@ export default function Home() {
 						/>
 					</div>
 					<hr className="absolute bottom-3 left-0 hidden w-full border-2 bg-primary2 sm:bottom-[1.35rem] xl:block" />
-				</div>
+				</Container>
 			</Section>
 			<section>
 				<HomeDivider />
