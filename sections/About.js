@@ -9,7 +9,7 @@ export default function About() {
 		<>
 			<Section id="about" addClass="xl:items-center" bgColor="bg-primary">
 				<Container addClass="flex-col items-center justify-around lg:justify-between lg:flex-row">
-					<div className="lgd:min-h-full flex flex-col lg:min-w-[30rem] xl:justify-between">
+					<div className="flex flex-col lg:min-w-[30rem] xl:justify-between">
 						<h1 className="mb-16 text-4xl font-bold md:mb-20 md:text-6xl lg:text-7xl xl:mb-24">
 							ABOUT
 						</h1>
