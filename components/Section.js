@@ -1,13 +1,14 @@
+import { classNames } from "../utils/index";
+
 export default function Section({ id, addClass, bgColor, children }) {
 	return (
 		<section
 			id={id}
-			className={
-				"relative flex min-h-screen w-full justify-center overflow-auto xl:items-center " +
-				addClass +
-				" " +
+			className={classNames(
+				"relative flex min-h-screen w-full justify-center overflow-auto pt-16 text-primary2",
+				addClass,
 				bgColor
-			}
+			)}
 		>
 			{children}
 		</section>
