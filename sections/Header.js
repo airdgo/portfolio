@@ -30,8 +30,11 @@ export default function Header() {
 			<nav className="relative mx-auto my-0 flex h-full w-[85%] max-w-[90rem] flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
 					<div className="text-lg md:text-xl" onClick={hideMenu}>
-						<Link href="#home" title="Home">
-							<a className="focus:outline focus:outline-1 focus:outline-primary2">
+						<Link href="#home">
+							<a
+								title="Home"
+								className="focus:outline focus:outline-1 focus:outline-primary2"
+							>
 								HOME
 							</a>
 						</Link>
