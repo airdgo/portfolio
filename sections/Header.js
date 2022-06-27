@@ -31,7 +31,9 @@ export default function Header() {
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
 					<div className="text-lg md:text-xl" onClick={hideMenu}>
 						<Link href="#home" title="Home">
-							HOME
+							<a className="focus:outline focus:outline-1 focus:outline-primary2">
+								HOME
+							</a>
 						</Link>
 					</div>
 					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />

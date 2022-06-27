@@ -7,7 +7,9 @@ export default function DesktopNav({ onClick }) {
 			{[...navigation, ...externalLinks].map((nav) => (
 				<li key={nav.title} onClick={onClick}>
 					<Link href={nav.link} title={nav.title}>
-						{nav.content}
+						<a className="focus:outline focus:outline-1 focus:outline-primary2">
+							{nav.content}
+						</a>
 					</Link>
 				</li>
 			))}
