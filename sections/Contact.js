@@ -3,8 +3,32 @@ import Section from "../components/Section";
 import Container from "../components/Container";
 import { EmailIcon } from "../icons";
 import Input from "../components/Input";
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 
 export default function Contact() {
+	const formRef = useRef();
+
+	async function sendEmail(e) {
+		e.preventDefault();
+
+		const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+		const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+		const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
+
+		try {
+			await emailjs.sendForm(
+				SERVICE_ID,
+				TEMPLATE_ID,
+				formRef.current,
+				PUBLIC_KEY
+			);
+			formRef.current.reset();
+		} catch (error) {
+			console.log(error.text);
+		}
+	}
+
 	return (
 		<>
 			<Section id="contact" addClass="" bgColor="bg-primary">
@@ -27,10 +51,20 @@ export default function Contact() {
 						</div>
 					</div>
 					<div className="flex w-full items-center justify-center lg:justify-end">
-						<form className="flex w-full max-w-sm flex-col justify-center sm:max-w-md lg:max-w-xl">
-							<Input type="text" id="name" name="name" label="NAME" />
-							<Input type="email" id="email" name="email" label="EMAIL" />
-							<Input id="message" name="message" label="MESSAGE" />
+						<form
+							ref={formRef}
+							onSubmit={sendEmail}
+							className="flex w-full max-w-sm flex-col justify-center sm:max-w-md lg:max-w-xl"
+						>
+							<Input required type="text" id="name" name="name" label="NAME" />
+							<Input
+								required
+								type="email"
+								id="email"
+								name="email"
+								label="EMAIL"
+							/>
+							<Input required id="message" name="message" label="MESSAGE" />
 							<button className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight lg:mr-auto lg:ml-0 lg:px-8 lg:py-2">
 								HIT ME UP
 							</button>
