@@ -9,7 +9,7 @@ export default function Contact() {
 		<>
 			<Section id="contact" addClass="" bgColor="bg-primary">
 				<Container addClass="flex-col justify-around items-center lg:justify-between lg:flex-row">
-					<div className="lg:mr-8 lg:w-full lg:min-w-[30rem]">
+					<div className="lg:mr-16 lg:w-full lg:min-w-[30rem] xl:mr-32">
 						<h1 className="mb-16 text-4xl font-bold md:mb-20 md:text-6xl lg:text-7xl xl:mb-24">
 							CONTACT
 						</h1>
@@ -27,7 +27,7 @@ export default function Contact() {
 						</div>
 					</div>
 					<div className="flex w-full items-center justify-center lg:justify-end">
-						<form className="flex w-full max-w-sm flex-col justify-center sm:max-w-md lg:max-w-lg">
+						<form className="flex w-full max-w-sm flex-col justify-center sm:max-w-md lg:max-w-xl">
 							<Input type="text" id="name" name="name" label="NAME" />
 							<Input type="email" id="email" name="email" label="EMAIL" />
 							<Input id="message" name="message" label="MESSAGE" />
