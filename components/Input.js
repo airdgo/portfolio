@@ -2,7 +2,7 @@ import { classNames } from "../utils";
 
 export default function Input({ label, ...props }) {
 	const inputClass =
-		"mb-2 mt-1 block rounded bg-primaryLight px-2 py-1 focus:outline focus:outline-1 focus:outline-neutralLight sm:mb-8 sm:py-2 lg:mb-14 lg:mt-2";
+		"mb-2 mt-1 block rounded font-accent bg-primaryLight px-2 py-1 focus:outline focus:outline-1 focus:outline-neutralLight sm:mb-8 sm:py-2 lg:mb-14 lg:mt-2";
 
 	return (
 		<>
