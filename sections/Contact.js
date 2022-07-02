@@ -4,10 +4,21 @@ import Container from "../components/Container";
 import { EmailIcon } from "../icons";
 import Input from "../components/Input";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import Alert from "../components/Alert";
 
 export default function Contact() {
 	const formRef = useRef();
+	const [isVisible, setIsVisible] = useState(false);
+	const [loading, setLoading] = useState(false);
+
+	function displayAlert() {
+		setIsVisible(true);
+
+		setTimeout(() => {
+			setIsVisible(false);
+		}, 2000);
+	}
 
 	async function sendEmail(e) {
 		e.preventDefault();
@@ -17,6 +28,7 @@ export default function Contact() {
 		const PUBLIC_KEY = process.env.NEXT_PUBLIC_PUBLIC_KEY;
 
 		try {
+			setLoading(true);
 			await emailjs.sendForm(
 				SERVICE_ID,
 				TEMPLATE_ID,
@@ -24,9 +36,11 @@ export default function Contact() {
 				PUBLIC_KEY
 			);
 			formRef.current.reset();
+			displayAlert();
 		} catch (error) {
 			console.log(error.text);
 		}
+		setLoading(false);
 	}
 
 	return (
@@ -65,11 +79,15 @@ export default function Contact() {
 								label="EMAIL"
 							/>
 							<Input required id="message" name="message" label="MESSAGE" />
-							<button className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight lg:mr-auto lg:ml-0 lg:px-8 lg:py-2">
+							<button
+								disabled={loading}
+								className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
+							>
 								HIT ME UP
 							</button>
 						</form>
 					</div>
+					<Alert visible={isVisible}>Thank you!</Alert>
 				</Container>
 			</Section>
 			<section>
