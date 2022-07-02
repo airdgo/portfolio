@@ -1,3 +1,4 @@
-import { useScrollPosition } from "./useScrollPosition";
+import useScrollPosition from "./useScrollPosition";
+import useToggle from "./useToggle";
 
-export { useScrollPosition };
+export { useScrollPosition, useToggle };

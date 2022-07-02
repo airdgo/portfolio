@@ -26,7 +26,7 @@ export default function About() {
 						<div className="flex items-center md:text-lg">
 							Download my
 							<a
-								className="ml-4 flex items-center gap-3 rounded-full bg-accent2 py-1 px-4 font-accent text-primary transition-colors duration-300 hover:bg-primary2"
+								className="ml-4 flex items-center gap-3 rounded-full bg-accent2 py-1 px-4 font-accent text-primary transition-colors duration-300 hover:bg-primary2 focus:outline focus:outline-1 focus:outline-primary2"
 								title="Download Resume"
 								href="/Vlad-Dragoi-Resume.pdf"
 								target="_blank"

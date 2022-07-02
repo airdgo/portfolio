@@ -19,6 +19,7 @@ module.exports = {
 				dashboard: "#6219FA",
 				primary: "#11171E",
 				primary2: "#FFFEFA",
+				primaryLight: "#1C222A",
 				accent1: "#FFAE63",
 				accent2: "#FF6584",
 				neutral: "#1C1942",
