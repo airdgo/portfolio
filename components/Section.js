@@ -5,7 +5,7 @@ export default function Section({ id, addClass, bgColor, children }) {
 		<section
 			id={id}
 			className={classNames(
-				"relative flex min-h-screen w-full justify-center overflow-auto overflow-x-hidden pt-16 text-primary2",
+				"relative flex min-h-screen w-full justify-center overflow-auto overflow-x-hidden py-16 text-primary2",
 				addClass,
 				bgColor
 			)}
