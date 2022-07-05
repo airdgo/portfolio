@@ -1,17 +1,15 @@
 import ProjectsDivider from "../assets/sectionDividers/ProjectsDivider";
 import Section from "../components/Section";
 import Container from "../components/Container";
-import weatherThb from "../assets/images/WeatherProject.png";
 import Image from "next/image";
 import ProjectWraper from "../components/ProjectWraper";
+import { projects } from "../constants";
 
 export default function Projects() {
-	const projectsSrc = [weatherThb, weatherThb, weatherThb];
-
-	const renderProjects = (projectsSrc) =>
-		projectsSrc.map((projectSrc) => (
-			<ProjectWraper>
-				<Image alt="tralala" src={projectSrc} />
+	const renderProjects = (projects) =>
+		projects.map((project) => (
+			<ProjectWraper key={project.name}>
+				<Image alt={project.name} src={project.src} />
 			</ProjectWraper>
 		));
 
@@ -28,7 +26,7 @@ export default function Projects() {
 					</h1>
 
 					<div className="grid justify-items-center gap-4 lg:grid-cols-3">
-						{renderProjects(projectsSrc)}
+						{renderProjects(projects)}
 					</div>
 				</Container>
 			</Section>
