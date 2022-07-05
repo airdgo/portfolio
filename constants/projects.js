@@ -2,15 +2,15 @@ import weatherAppProjectSrc from "../assets/images/WeatherProject.png";
 
 export const projects = [
 	{
-		name: "Weather App",
+		name: "WEATHER APP",
 		src: weatherAppProjectSrc,
 	},
 	{
-		name: "Flight Envelope Plotter",
+		name: "FLIGHT ENVELOPE PLOTTER",
 		src: weatherAppProjectSrc,
 	},
 	{
-		name: "TruYou",
+		name: "TRUYOU",
 		src: weatherAppProjectSrc,
 	},
 ];
