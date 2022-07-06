@@ -4,11 +4,15 @@ import Container from "../components/Container";
 import Image from "next/image";
 import ProjectWraper from "../components/ProjectWraper";
 import { projects } from "../constants";
+import Modal from "../components/Modal";
+import { useState } from "react";
 
 export default function Projects() {
+	const [isOpen, setIsOpen] = useState(false);
+
 	const renderProjects = (projects) =>
 		projects.map((project) => (
-			<ProjectWraper key={project.name}>
+			<ProjectWraper key={project.name} onClick={() => setIsOpen(true)}>
 				<Image
 					alt={project.name}
 					src={project.src}
@@ -38,6 +42,9 @@ export default function Projects() {
 					<div className="grid h-full justify-items-center gap-4 lg:grid-cols-3">
 						{renderProjects(projects)}
 					</div>
+					<Modal open={isOpen} onClose={() => setIsOpen(false)}>
+						MODAL
+					</Modal>
 				</Container>
 			</Section>
 			<section>

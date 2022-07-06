@@ -1,6 +1,9 @@
-export default function ProjectWraper({ children }) {
+export default function ProjectWraper({ children, ...props }) {
 	return (
-		<div className="relative aspect-video max-h-[15rem] min-h-[10rem] w-full max-w-[28rem]">
+		<div
+			{...props}
+			className="relative aspect-video max-h-[15rem] min-h-[10rem] w-full max-w-[28rem]"
+		>
 			{children}
 		</div>
 	);
