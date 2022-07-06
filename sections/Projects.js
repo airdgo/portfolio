@@ -9,17 +9,24 @@ import { useState } from "react";
 
 export default function Projects() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [modalContent, setModalContent] = useState({});
 
 	const renderProjects = (projects) =>
 		projects.map((project) => (
-			<ProjectWraper key={project.name} onClick={() => setIsOpen(true)}>
+			<ProjectWraper
+				key={project.name}
+				onClick={() => {
+					setModalContent(project);
+					setIsOpen(true);
+				}}
+			>
 				<Image
 					alt={project.name}
-					src={project.src}
+					src={project.imageSrc}
 					layout="fill"
 					objectFit="cover"
 				/>
-				<div className="absolute inset-0 grid h-full w-full cursor-pointer place-items-center bg-[#1d1d1fb3] px-2 text-center font-primary text-primary2 opacity-0 transition-all duration-500 ease-in-out hover:opacity-100 hasTouch:opacity-100">
+				<div className="absolute inset-0 grid h-full w-full cursor-pointer place-items-center bg-[#1d1d1fb3] px-2 text-center font-primary text-primary2 opacity-0 transition-all duration-500 ease-in-out hover:opacity-100">
 					<div className="text-3xl font-medium md:font-bold lg:text-4xl">
 						{project.name}
 					</div>
@@ -42,7 +49,11 @@ export default function Projects() {
 					<div className="grid h-full justify-items-center gap-4 lg:grid-cols-3">
 						{renderProjects(projects)}
 					</div>
-					<Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
+					<Modal
+						open={isOpen}
+						content={modalContent}
+						onClose={() => setIsOpen(false)}
+					/>
 				</Container>
 			</Section>
 			<section>

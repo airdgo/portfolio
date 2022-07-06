@@ -1,8 +1,7 @@
 import Image from "next/image";
-import weatherAppProjectSrc from "../assets/images/WeatherProject.png";
 import { LiveSiteIcon, CodeIcon, CloseModalIcon } from "../icons";
 
-export default function Modal({ open, onClose, children }) {
+export default function Modal({ open, onClose, content }) {
 	if (!open) return null;
 	return (
 		<div
@@ -15,19 +14,19 @@ export default function Modal({ open, onClose, children }) {
 			>
 				<div>
 					<h1 className="mb-4 text-2xl font-semibold xl:text-3xl">
-						WEATHER APP
+						{content.name}
 					</h1>
 					<div className="max-w-sm">
 						<Image
-							src={weatherAppProjectSrc}
-							alt="tralala"
+							src={content.imageSrc}
+							alt={content.name}
 							className="rounded-md"
 						/>
 					</div>
 					<div className="mt-2 flex items-center">
 						<a
 							title="Live Site"
-							href="/"
+							href={content.liveSite}
 							target="_blank"
 							className="flex items-center text-neutralLighter hover:text-inherit"
 						>
@@ -36,7 +35,7 @@ export default function Modal({ open, onClose, children }) {
 						</a>
 						<a
 							title="Code"
-							href="/"
+							href={content.code}
 							target="_blank"
 							className="ml-4 flex items-center text-neutralLighter hover:text-inherit"
 						>
@@ -50,12 +49,12 @@ export default function Modal({ open, onClose, children }) {
 					<h1 className="mb-4 mt-8 text-2xl font-semibold lg:mt-0 xl:text-3xl">
 						TECHNOLOGIES
 					</h1>
-					<ul className="flex gap-4 text-sm text-primaryDark">
-						<li className="rounded-full bg-neutralLighter py-1 px-4">
-							JavaScript
-						</li>
-						<li className="rounded-full bg-neutralLighter py-1 px-4">SASS</li>
-						<li className="rounded-full bg-neutralLighter py-1 px-4">API</li>
+					<ul className="flex w-full flex-wrap gap-4 text-sm text-primaryDark">
+						{content.technologies.map((technologie) => (
+							<li className="rounded-full bg-neutralLighter py-1 px-4">
+								{technologie}
+							</li>
+						))}
 					</ul>
 				</div>
 				<div className="lg:col-span-2">
@@ -63,10 +62,7 @@ export default function Modal({ open, onClose, children }) {
 						ABOUT
 					</h1>
 					<p className="fontlight text-sm text-neutralLighter sm:text-base">
-						This is an app which displays the weather for a given location for
-						the next 8 days and the temperature for the next 6 hours as well as
-						the humidity, wind speed, what the tempereture feels like, maximum
-						and minimum temperature, UV index, the visibility and pressure.
+						{content.about}
 					</p>
 				</div>
 				<button
