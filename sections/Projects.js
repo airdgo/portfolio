@@ -42,9 +42,7 @@ export default function Projects() {
 					<div className="grid h-full justify-items-center gap-4 lg:grid-cols-3">
 						{renderProjects(projects)}
 					</div>
-					<Modal open={isOpen} onClose={() => setIsOpen(false)}>
-						MODAL
-					</Modal>
+					<Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>
 				</Container>
 			</Section>
 			<section>
