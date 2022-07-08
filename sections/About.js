@@ -18,9 +18,10 @@ export default function About() {
 								Explorer
 							</h2>
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-								dapibus non elit vitae porttitor. Maecenas sodales massa risus,
-								a sollicitudin est condimentum sit amet.
+								I am a solution oriented Frontend Web Developer based in
+								Cluj-Napoca, Romania. Being a lifelong learner, I am eager to
+								take on programming and design challenges that will provide a
+								lasting impact on user experience.
 							</p>
 						</div>
 						<div className="flex items-center md:text-lg">
