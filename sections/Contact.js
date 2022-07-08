@@ -81,7 +81,7 @@ export default function Contact() {
 							<Input required id="message" name="message" label="MESSAGE" />
 							<button
 								disabled={loading}
-								className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
+								className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight active:scale-105 lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
 							>
 								HIT ME UP
 							</button>

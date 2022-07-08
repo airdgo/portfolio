@@ -28,7 +28,7 @@ export default function Modal({ open, onClose, content }) {
 							title="Live Site"
 							href={content.liveSite}
 							target="_blank"
-							className="flex items-center text-neutralLighter hover:text-inherit"
+							className="flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
 						>
 							<DemoIcon />
 							Demo
@@ -37,7 +37,7 @@ export default function Modal({ open, onClose, content }) {
 							title="Code"
 							href={content.code}
 							target="_blank"
-							className="ml-4 flex items-center text-neutralLighter hover:text-inherit"
+							className="ml-4 flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
 						>
 							<CodeIcon />
 							Code
@@ -69,7 +69,7 @@ export default function Modal({ open, onClose, content }) {
 					</p>
 				</div>
 				<button
-					className="absolute right-4 top-4 sm:right-12 sm:top-8 lg:top-12 lg:right-20"
+					className="absolute right-4 top-4 focus:outline focus:outline-1 focus:outline-primary2 sm:right-12 sm:top-8 lg:top-12 lg:right-20"
 					onClick={onClose}
 				>
 					<CloseModalIcon />
