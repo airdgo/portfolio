@@ -9,6 +9,7 @@ import { classNames } from "../utils/index";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const scrollPosition = useScrollPosition();
+	console.log(scrollPosition);
 
 	function toggleMenu() {
 		setIsOpen((prevState) => !prevState);
@@ -23,7 +24,15 @@ export default function Header() {
 		<header
 			className={classNames(
 				isOpen ? "opacity-100" : "opacity-95",
-				scrollPosition >= 80 ? "lg:bg-neutralDark" : "lg:bg-transparent",
+				scrollPosition >= 3200
+					? "lg:bg-primary"
+					: scrollPosition >= 2200
+					? "lg:bg-neutralDark"
+					: scrollPosition >= 1000
+					? "lg:bg-primary"
+					: scrollPosition >= 80
+					? "lg:bg-primaryDark"
+					: "lg:bg-dashboard",
 				"fixed top-0 left-0 z-50 w-full bg-neutral font-primary text-primary2 transition-colors duration-[850ms] ease-in-out"
 			)}
 		>
