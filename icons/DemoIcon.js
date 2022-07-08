@@ -1,4 +1,4 @@
-export default function LiveSiteIcon() {
+export default function DemoIcon() {
 	return (
 		<svg
 			width="25"

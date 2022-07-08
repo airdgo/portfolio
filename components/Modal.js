@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LiveSiteIcon, CodeIcon, CloseModalIcon } from "../icons";
+import { DemoIcon, CodeIcon, CloseModalIcon } from "../icons";
 
 export default function Modal({ open, onClose, content }) {
 	if (!open) return null;
@@ -10,7 +10,7 @@ export default function Modal({ open, onClose, content }) {
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}
-				className="relative grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
+				className="relative my-4 grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
 			>
 				<div>
 					<h1 className="mb-4 text-2xl font-semibold xl:text-3xl">
@@ -30,8 +30,8 @@ export default function Modal({ open, onClose, content }) {
 							target="_blank"
 							className="flex items-center text-neutralLighter hover:text-inherit"
 						>
-							<LiveSiteIcon />
-							Live
+							<DemoIcon />
+							Demo
 						</a>
 						<a
 							title="Code"
@@ -51,7 +51,10 @@ export default function Modal({ open, onClose, content }) {
 					</h1>
 					<ul className="flex w-full flex-wrap gap-4 text-sm text-primaryDark">
 						{content.technologies.map((technologie) => (
-							<li className="rounded-full bg-neutralLighter py-1 px-4">
+							<li
+								key={technologie}
+								className="rounded-full bg-neutralLighter py-1 px-4"
+							>
 								{technologie}
 							</li>
 						))}

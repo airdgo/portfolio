@@ -14,7 +14,7 @@ export default function Projects() {
 	const renderProjects = (projects) =>
 		projects.map((project) => (
 			<ProjectWraper
-				key={project.name}
+				key={project.id}
 				onClick={() => {
 					setModalContent(project);
 					setIsOpen(true);
@@ -41,7 +41,7 @@ export default function Projects() {
 				bgColor="bg-primary2"
 				addClass="text-primary items-center"
 			>
-				<Container addClass="flex-col justify-between">
+				<Container addClass="flex-col justify-between mt-8">
 					<h1 className="mb-16 text-center text-5xl font-bold md:mb-20 md:text-6xl lg:mb-40 lg:text-left lg:text-7xl">
 						WORK
 					</h1>

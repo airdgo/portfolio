@@ -3,7 +3,7 @@ import LinkedInIcon from "./LinkedInIcon";
 import DownloadIcon from "./DownloadIcon";
 import EmailIcon from "./EmailIcon";
 import CodeIcon from "./CodeIcon";
-import LiveSiteIcon from "./LiveSiteIcon";
+import DemoIcon from "./DemoIcon";
 import CloseModalIcon from "./CloseModalIcon";
 
 export {
@@ -12,6 +12,6 @@ export {
 	DownloadIcon,
 	EmailIcon,
 	CodeIcon,
-	LiveSiteIcon,
+	DemoIcon,
 	CloseModalIcon,
 };
