@@ -11,9 +11,6 @@ module.exports = {
 	],
 	theme: {
 		extend: {
-			screens: {
-				hasTouch: { raw: "(hover: none) and (pointer: coarse)" },
-			},
 			fontFamily: {
 				primary: ["Roboto", "sans-serif"],
 				accent: ["Roboto Mono", "monospace"],
