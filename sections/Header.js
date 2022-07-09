@@ -9,7 +9,6 @@ import { classNames } from "../utils/index";
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	const scrollPosition = useScrollPosition();
-	console.log(scrollPosition);
 
 	function toggleMenu() {
 		setIsOpen((prevState) => !prevState);
@@ -24,7 +23,7 @@ export default function Header() {
 		<header
 			className={classNames(
 				isOpen ? "opacity-100" : "opacity-95",
-				scrollPosition >= 3200
+				scrollPosition >= 3600
 					? "lg:bg-primary"
 					: scrollPosition >= 2200
 					? "lg:bg-neutralDark"
@@ -39,14 +38,13 @@ export default function Header() {
 			<nav className="relative mx-auto my-0 flex h-full w-[85%] max-w-[90rem] flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-[40] flex h-16 w-full items-center justify-between">
 					<div className="text-lg md:text-xl" onClick={hideMenu}>
-						<Link href="#home">
-							<a
-								title="Home"
-								className="focus:outline focus:outline-1 focus:outline-primary2"
-							>
-								HOME
-							</a>
-						</Link>
+						<a
+							href="#home"
+							title="Home"
+							className="focus:outline focus:outline-1 focus:outline-primary2"
+						>
+							HOME
+						</a>
 					</div>
 					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 				</div>

@@ -7,29 +7,20 @@ export const navigation = [
 	{
 		link: "#about",
 		title: "About me",
-		content: (
-			<a title="About me" className={focusStyle}>
-				ABOUT
-			</a>
-		),
+		class: focusStyle,
+		content: "ABOUT",
 	},
 	{
 		link: "#projects",
 		title: "Projects",
-		content: (
-			<a title="Projects" className={focusStyle}>
-				PROJECTS
-			</a>
-		),
+		class: focusStyle,
+		content: "PROJECTS",
 	},
 	{
 		link: "#contact",
 		title: "Send me an email",
-		content: (
-			<a title="Send me an email" className={focusStyle}>
-				CONTACT
-			</a>
-		),
+		class: focusStyle,
+		content: "CONTACT",
 	},
 ];
 
@@ -37,27 +28,13 @@ export const externalLinks = [
 	{
 		link: "https://www.linkedin.com/in/vlad-dragoi/",
 		title: "My LinkedIn Profile",
-		content: (
-			<a
-				target="_blank"
-				title="My LinkedIn Profile"
-				className={classNames(focusStyle, "block w-9 lg:w-6")}
-			>
-				<LinkedInIcon />
-			</a>
-		),
+		class: classNames(focusStyle, "block w-9 lg:w-6"),
+		content: <LinkedInIcon />,
 	},
 	{
 		link: "https://github.com/airdgo",
 		title: "My GitHub Page",
-		content: (
-			<a
-				target="_blank"
-				title="My GitHub Page"
-				className={classNames(focusStyle, "block w-9 lg:w-6")}
-			>
-				<GithubIcon />
-			</a>
-		),
+		class: classNames(focusStyle, "block w-9 lg:w-6"),
+		content: <GithubIcon />,
 	},
 ];
