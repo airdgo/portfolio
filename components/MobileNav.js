@@ -30,7 +30,7 @@ export default function MobileNav({ isOpen, onClick }) {
 								href={nav.link}
 								title={nav.title}
 								className={nav.class}
-								target="_blank"
+								target={nav?.target}
 							>
 								{nav.content}
 							</a>

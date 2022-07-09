@@ -5,7 +5,9 @@ export default function DesktopNav({ onClick }) {
 		<ul className="hidden h-auto items-center justify-center gap-16 text-lg lg:static lg:flex">
 			{[...navigation, ...externalLinks].map((nav) => (
 				<li key={nav.title} onClick={onClick} className={nav.class}>
-					<a href={nav.link}>{nav.content}</a>
+					<a href={nav.link} title={nav.title} target={nav?.target}>
+						{nav.content}
+					</a>
 				</li>
 			))}
 		</ul>
