@@ -14,13 +14,15 @@ export default function About() {
 							ABOUT
 						</h1>
 						<div className="mb-6 md:mb-12 xl:mb-16">
-							<h2 className="font-accent text-2xl font-medium md:text-4xl lg:text-5xl">
+							<h1 className="font-accent text-2xl font-medium md:text-4xl lg:text-5xl">
 								Explorer
-							</h2>
+							</h1>
+
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-								dapibus non elit vitae porttitor. Maecenas sodales massa risus,
-								a sollicitudin est condimentum sit amet.
+								I am a solution oriented Frontend Web Developer based in
+								Cluj-Napoca, Romania. Being a lifelong learner, I am eager to
+								take on programming and design challenges that will provide a
+								lasting impact on user experience.
 							</p>
 						</div>
 						<div className="flex items-center md:text-lg">

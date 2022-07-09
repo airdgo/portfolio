@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { navigation, externalLinks } from "../constants";
 import { useTransition, animated } from "@react-spring/web";
 
@@ -18,17 +17,23 @@ export default function MobileNav({ isOpen, onClick }) {
 				>
 					{navigation.map((nav) => (
 						<li key={nav.title} onClick={onClick}>
-							<Link href={nav.link} title={nav.title}>
+							<a href={nav.link} title={nav.title} className={nav.class}>
 								{nav.content}
-							</Link>
+							</a>
 						</li>
 					))}
 
 					<li className="flex w-full max-w-[10rem] items-center justify-between lg:gap-16">
 						{externalLinks.map((nav) => (
-							<Link key={nav.title} href={nav.link} title={nav.title}>
+							<a
+								key={nav.title}
+								href={nav.link}
+								title={nav.title}
+								className={nav.class}
+								target={nav?.target}
+							>
 								{nav.content}
-							</Link>
+							</a>
 						))}
 					</li>
 				</animated.ul>
