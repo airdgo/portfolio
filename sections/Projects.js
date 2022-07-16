@@ -43,7 +43,7 @@ export default function Projects() {
 			>
 				<Container addClass="flex-col justify-between mt-8">
 					<h1 className="mb-16 text-center text-5xl font-bold md:mb-20 md:text-6xl lg:mb-40 lg:text-left lg:text-7xl">
-						WORK
+						PROJECTS
 					</h1>
 
 					<div className="grid h-full justify-items-center gap-4 lg:grid-cols-3">

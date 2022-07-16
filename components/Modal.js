@@ -13,7 +13,7 @@ export default function Modal({ open, onClose, content }) {
 				className="relative my-4 grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
 			>
 				<div>
-					<h1 className="mb-4 text-2xl font-semibold xl:text-3xl">
+					<h1 className="mb-4 mr-8 text-2xl font-semibold xl:text-3xl">
 						{content.name}
 					</h1>
 					<div className="max-w-sm">
@@ -26,7 +26,7 @@ export default function Modal({ open, onClose, content }) {
 					<div className="mt-2 flex items-center">
 						<a
 							title="Live Site"
-							href={content.liveSite}
+							href={content.demo}
 							target="_blank"
 							className="flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
 						>
