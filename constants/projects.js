@@ -20,7 +20,7 @@ export const projects = [
 		id: 3,
 		name: "RATE ALL THE MUSIC",
 		imageSrc: rateAllTheMusic,
-		demo: "",
+		demo: "https://youtu.be/mS93pNN60kQ",
 		code: "https://github.com/crstern/Rate-all-the-music",
 		technologies: ["ReactJS", "Docker"],
 		about:
