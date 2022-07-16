@@ -53,15 +53,20 @@ export default function Contact() {
 						</h1>
 						<div>
 							<h2 className="font-accent text-2xl font-medium md:text-4xl">
-								Doler ipsum sit amet
+								Ready to create something amazing?
 							</h2>
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-								dapibus non elit vitae porttitor.
+								Do you want to collaborate, ask a question, or simply want to
+								say hello? I'm just a click away!
 							</p>
-							<div className="mt-4 flex items-center lg:mt-8">
-								<EmailIcon className="mr-2" /> vladdragoi1@gmail.com
-							</div>
+
+							<a
+								href="mailto:vladdragoi1@gmail.com"
+								className="mt-4 flex items-center lg:mt-8"
+							>
+								<EmailIcon className="mr-2" />
+								vladdragoi1@gmail.com
+							</a>
 						</div>
 					</div>
 					<div className="flex w-full items-center justify-center lg:justify-end">
