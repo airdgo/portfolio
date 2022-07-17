@@ -1,7 +1,7 @@
 import { useState } from "react";
 import HamburgerMenu from "../components/HamburgerMenu";
 import { useScrollPosition } from "../hooks";
-import DesktopNav from "../components/DesktopNav";
+import Navigation from "../components/Navigation";
 import { classNames } from "../utils/index";
 
 export default function Header() {
@@ -46,7 +46,7 @@ export default function Header() {
 				</div>
 
 				{/* <MobileNav isOpen={isOpen} onClick={hideMenu} /> */}
-				<DesktopNav onClick={hideMenu} isOpen={isOpen} />
+				<Navigation onClick={hideMenu} isOpen={isOpen} />
 			</nav>
 		</header>
 	);

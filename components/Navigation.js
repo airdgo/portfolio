@@ -1,7 +1,7 @@
 import { navigation, externalLinks } from "../constants";
 import { classNames } from "../utils";
 
-export default function DesktopNav({ onClick, isOpen }) {
+export default function Navigation({ onClick, isOpen }) {
 	return (
 		<ul
 			className={classNames(
@@ -10,8 +10,13 @@ export default function DesktopNav({ onClick, isOpen }) {
 			)}
 		>
 			{[...navigation, ...externalLinks].map((nav) => (
-				<li key={nav.title} onClick={onClick} className={nav.class}>
-					<a href={nav.link} title={nav.title} target={nav?.target}>
+				<li key={nav.title} onClick={onClick}>
+					<a
+						href={nav.link}
+						title={nav.title}
+						className={nav.class}
+						target={nav?.target}
+					>
 						{nav.content}
 					</a>
 				</li>
