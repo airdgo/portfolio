@@ -4,7 +4,7 @@ import { useTransition, animated } from "@react-spring/web";
 export default function MobileNav({ isOpen, onClick }) {
 	const transitions = useTransition(isOpen, {
 		from: { x: 0, y: -500, opacity: 0 },
-		enter: { x: 0, y: 0, opacity: 1 },
+		enter: { x: 0, y: 100, opacity: 1 },
 		leave: { x: 0, y: -500, opacity: 0 },
 	});
 
@@ -13,7 +13,7 @@ export default function MobileNav({ isOpen, onClick }) {
 			item && (
 				<animated.ul
 					style={style}
-					className="fixed z-[0] flex h-screen w-full flex-col items-center justify-center gap-16 bg-neutral text-3xl lg:hidden"
+					className="fixed z-[0] flex w-[80%] items-center justify-center gap-16 bg-neutral text-3xl lg:hidden"
 				>
 					{navigation.map((nav) => (
 						<li key={nav.title} onClick={onClick}>
