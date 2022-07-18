@@ -8,10 +8,10 @@ export default function Home() {
 		<>
 			<Section
 				id="home"
-				addClass="lg:items-center"
-				bgColor="bg-dashboard sticky top-0"
+				addClass="sticky top-0 lg:items-center"
+				bgColor="bg-dashboard"
 			>
-				<Container addClass="flex-col items-center justify-around lg:justify-between lg:flex-row sm:mt-16 lg:mt-0">
+				<Container addClass="flex-col items-center justify-around mt-12 lg:justify-between lg:flex-row sm:mt-16 lg:mt-0">
 					<div className="lg:min-w-[30rem]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal lg:text-left">
 							<h1>Hi, I'm Vlad.</h1>

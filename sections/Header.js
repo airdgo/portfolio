@@ -22,7 +22,7 @@ export default function Header() {
 			<div
 				className={classNames(
 					isOpen ? "translate-y-0" : "-translate-y-14",
-					scrollPosition >= 1120 && "bg-[#0f1922cc] backdrop-blur",
+					scrollPosition >= 700 && "bg-[#0f1922cc] backdrop-blur",
 					"absolute h-28 w-full duration-[400ms] ease-in-out lg:-translate-y-14"
 				)}
 			/>
