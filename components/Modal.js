@@ -6,7 +6,7 @@ export default function Modal({ open, onClose, content }) {
 	return (
 		<div
 			onClick={onClose}
-			className="fixed top-0 left-0 z-50 grid h-screen w-full place-items-center overflow-auto bg-[#1d1d1fb3] text-primary2"
+			className="fixed top-0 left-0 z-[200] grid h-screen w-full place-items-center overflow-auto bg-[#1d1d1fb3] text-primary2"
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}

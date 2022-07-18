@@ -56,7 +56,7 @@ export default function Projects() {
 					/>
 				</Container>
 			</Section>
-			<section>
+			<section className="relative z-[2]">
 				<ProjectsDivider />
 			</section>
 		</>

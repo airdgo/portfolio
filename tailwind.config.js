@@ -16,7 +16,7 @@ module.exports = {
 				accent: ["Roboto Mono", "monospace"],
 			},
 			colors: {
-				dashboard: "#6219FA",
+				dashboard: "#5619BD",
 				primary: "#11171E",
 				primary2: "#FFFEFA",
 				primaryLight: "#1C222A",

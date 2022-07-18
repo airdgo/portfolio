@@ -6,8 +6,12 @@ import Container from "../components/Container";
 export default function Home() {
 	return (
 		<>
-			<Section id="home" addClass="lg:items-center" bgColor="bg-dashboard">
-				<Container addClass="flex-col items-center justify-around lg:justify-between lg:flex-row sm:mt-16 lg:mt-0">
+			<Section
+				id="home"
+				addClass="sticky top-0 lg:items-center"
+				bgColor="bg-dashboard"
+			>
+				<Container addClass="flex-col items-center justify-around mt-12 lg:justify-between lg:flex-row sm:mt-16 lg:mt-0">
 					<div className="lg:min-w-[30rem]">
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal lg:text-left">
 							<h1>Hi, I'm Vlad.</h1>
@@ -31,7 +35,7 @@ export default function Home() {
 					<hr className="absolute bottom-[0.8rem] left-0 hidden w-full border-2 bg-primary2 lg:block xl:bottom-[1.3rem]" />
 				</Container>
 			</Section>
-			<section>
+			<section className="relative z-[2]">
 				<HomeDivider />
 			</section>
 		</>
