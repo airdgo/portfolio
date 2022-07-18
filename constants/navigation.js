@@ -28,15 +28,21 @@ export const externalLinks = [
 	{
 		link: "https://www.linkedin.com/in/vlad-dragoi/",
 		title: "My LinkedIn Profile",
-		class: " focus:outline focus:outline-1 focus:outline-primary2 block w-6",
+		class:
+			"focus:outline focus:outline-1 focus:outline-primary2 w-6 h-6 flex items-center justify-center",
 		target: "_blank",
-		content: <LinkedInIcon />,
+		content: (
+			<LinkedInIcon className="h-5 w-5 transition-all duration-300 hover:h-6 hover:w-6" />
+		),
 	},
 	{
 		link: "https://github.com/airdgo",
 		title: "My GitHub Page",
 		target: "_blank",
-		class: " focus:outline focus:outline-1 focus:outline-primary2 block w-6",
-		content: <GithubIcon />,
+		class:
+			"focus:outline focus:outline-1 focus:outline-primary2 w-7 h-7 flex items-center justify-center",
+		content: (
+			<GithubIcon className="h-6 w-6 transition-all duration-300 hover:h-7 hover:w-7" />
+		),
 	},
 ];
