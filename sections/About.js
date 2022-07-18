@@ -45,7 +45,7 @@ export default function About() {
 				</Container>
 			</Section>
 
-			<section>
+			<section className="relative z-[2]">
 				<AboutDivider />
 			</section>
 		</>

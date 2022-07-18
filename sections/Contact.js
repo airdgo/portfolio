@@ -95,7 +95,7 @@ export default function Contact() {
 					<Alert visible={isVisible}>Thank you!</Alert>
 				</Container>
 			</Section>
-			<section>
+			<section className="relative z-[2]">
 				<ContactDivider />
 			</section>
 		</>
