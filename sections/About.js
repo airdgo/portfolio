@@ -3,6 +3,7 @@ import AboutDivider from "../assets/sectionDividers/AboutDivider";
 import { DownloadIcon } from "../icons/index";
 import Section from "../components/Section";
 import Container from "../components/Container";
+import Typewriter from "typewriter-effect";
 
 export default function About() {
 	return (
@@ -14,9 +15,23 @@ export default function About() {
 							ABOUT
 						</h1>
 						<div className="mb-6 md:mb-12 xl:mb-16">
-							<h1 className="font-accent text-2xl font-medium md:text-4xl lg:text-5xl">
-								Explorer
-							</h1>
+							<Typewriter
+								options={{
+									strings: [
+										"Explorer",
+										"Problem solver",
+										"Tea lover",
+										"Polymath",
+									],
+									autoStart: true,
+									pauseFor: 1000,
+									loop: true,
+									deleteSpeed: 100,
+									wrapperClassName:
+										"font-accent text-2xl font-medium md:text-4xl lg:text-5xl",
+									cursorClassName: "opacity-0",
+								}}
+							/>
 
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
 								I am a solution oriented Frontend Web Developer based in
