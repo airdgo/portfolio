@@ -6,6 +6,7 @@ import Input from "../components/Input";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import Alert from "../components/Alert";
+import bg from "../assets/button-light.svg";
 
 export default function Contact() {
 	const formRef = useRef();
@@ -53,7 +54,7 @@ export default function Contact() {
 						</h1>
 						<div>
 							<h2 className="font-accent text-2xl font-medium md:text-4xl">
-								Ready to create something amazing?
+								Let's create something amazing
 							</h2>
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
 								Do you want to collaborate, ask a question, or simply want to
@@ -86,7 +87,8 @@ export default function Contact() {
 							<Input required id="message" name="message" label="MESSAGE" />
 							<button
 								disabled={loading}
-								className="mx-auto mt-4 block border px-6 py-1 font-semibold focus:outline focus:outline-1 focus:outline-neutralLight active:scale-105 lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
+								className="mx-auto mt-4 block border bg-primary2 bg-[length:140%] bg-[position:400%] bg-no-repeat px-6 py-1 font-semibold text-primary transition-all duration-500 hover:bg-[position:50%] hover:text-primary2 focus:outline focus:outline-1 focus:outline-neutralLight active:scale-105 lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
+								style={{ backgroundImage: `url(${bg.src})` }}
 							>
 								HIT ME UP
 							</button>
