@@ -17,14 +17,19 @@ export default function About() {
 						<div className="mb-6 md:mb-12 xl:mb-16">
 							<Typewriter
 								options={{
-									strings: ["Explorer", "Programmer"],
+									strings: [
+										"Explorer",
+										"Problem solver",
+										"Tea lover",
+										"Polymath",
+									],
 									autoStart: true,
-									pauseFor: 8000,
+									pauseFor: 1000,
 									loop: true,
+									deleteSpeed: 100,
 									wrapperClassName:
 										"font-accent text-2xl font-medium md:text-4xl lg:text-5xl",
-									cursorClassName:
-										"Typewriter__cursor font-accent text-2xl font-medium md:text-4xl lg:text-5xl",
+									cursorClassName: "opacity-0",
 								}}
 							/>
 
