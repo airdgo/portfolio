@@ -6,7 +6,6 @@ import Input from "../components/Input";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import Alert from "../components/Alert";
-import bg from "../assets/button-light.svg";
 
 export default function Contact() {
 	const formRef = useRef();
@@ -70,7 +69,7 @@ export default function Contact() {
 							</a>
 						</div>
 					</div>
-					<div className="flex w-full items-center justify-center lg:justify-end">
+					<div className="mt-4 flex w-full items-center justify-center sm:mt-0 lg:justify-end">
 						<form
 							ref={formRef}
 							onSubmit={sendEmail}
@@ -87,8 +86,7 @@ export default function Contact() {
 							<Input required id="message" name="message" label="MESSAGE" />
 							<button
 								disabled={loading}
-								className="mx-auto mt-4 block border bg-primary2 bg-[length:140%] bg-[position:400%] bg-no-repeat px-6 py-1 font-semibold text-primary transition-all duration-500 hover:bg-[position:50%] hover:text-primary2 focus:outline focus:outline-1 focus:outline-neutralLight active:scale-105 lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
-								style={{ backgroundImage: `url(${bg.src})` }}
+								className="mx-auto mt-4 block border bg-primary2 bg-[url('../assets/button-dark.svg')] bg-[length:140%] bg-[position:400%] bg-no-repeat px-6 py-1 font-semibold text-primary transition-all duration-500 hover:bg-[position:50%] hover:text-primary2 focus:outline focus:outline-1 focus:outline-neutralLight active:scale-105 lg:mr-auto lg:ml-0 lg:px-8 lg:py-2"
 							>
 								HIT ME UP
 							</button>
