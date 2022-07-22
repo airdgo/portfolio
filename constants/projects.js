@@ -22,7 +22,7 @@ export const projects = [
 		imageSrc: rateAllTheMusic,
 		demo: "https://youtu.be/mS93pNN60kQ",
 		code: "https://github.com/crstern/Rate-all-the-music",
-		technologies: ["ReactJS", "Docker"],
+		technologies: ["ReactJS", "Docker", "CSS"],
 		about:
 			"RATM is a web application that allows users to evaluate artists and their albums, provide comments, and import new artists after creating an account. I collaborated on this project with a backend developer, and my role was to create and implement the UI/UX using ReactJS and CSS.",
 	},
@@ -32,7 +32,7 @@ export const projects = [
 		imageSrc: weatherApp,
 		demo: "https://airdgo-weather.netlify.app",
 		code: "https://github.com/airdgo/Weather-App",
-		technologies: ["JavaScript", "SASS"],
+		technologies: ["JavaScript", "SASS", "API"],
 		about:
 			"This app shows the temperature for the next six hours as well as the humidity, wind speed, how the temperature feels, maximum and lowest temperatures, UV index, visibility, and pressure for a specified area over the next eight days. Additionally, the user has the option to store a favorite place and view it without having to type its name.",
 	},
