@@ -54,7 +54,7 @@ export default function About() {
 						</div>
 					</div>
 
-					<div className="mt-16 max-w-xl lg:mt-0 xl:w-[50%] xl:max-w-2xl">
+					<div className="mt-16 w-11/12 max-w-xl lg:mt-0 xl:w-[50%] xl:max-w-2xl">
 						<MountainScene />
 					</div>
 				</Container>
