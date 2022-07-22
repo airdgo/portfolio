@@ -47,6 +47,7 @@ export default function About() {
 								title="Download Resume"
 								href="/Vlad-Dragoi-Resume.pdf"
 								target="_blank"
+								rel="noreferrer"
 							>
 								resume
 								<DownloadIcon />
