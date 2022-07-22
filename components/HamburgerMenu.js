@@ -1,6 +1,10 @@
 export default function HamburgerMenu({ onClick, isOpen }) {
 	return (
-		<button className="h-10 w-8 lg:hidden" onClick={onClick}>
+		<button
+			className="h-10 w-8 lg:hidden"
+			onClick={onClick}
+			aria-label="Toggle Menu"
+		>
 			<span
 				aria-hidden="true"
 				className={

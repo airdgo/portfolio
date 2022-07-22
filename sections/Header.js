@@ -39,8 +39,6 @@ export default function Header() {
 					</div>
 					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 				</div>
-
-				{/* <MobileNav isOpen={isOpen} onClick={hideMenu} /> */}
 				<Navigation onClick={hideMenu} isOpen={isOpen} />
 			</nav>
 		</header>
