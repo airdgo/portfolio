@@ -62,7 +62,7 @@ export const projects = [
 		imageSrc: vladDragoi,
 		demo: "",
 		code: "https://github.com/airdgo/portofolio",
-		technologies: ["NextJS", "TailwindCSS", "react-spring"],
+		technologies: ["NextJS", "TailwindCSS"],
 		about:
 			"This is my personal website where I showcase my skills and accomplishments as well as the projects I have been working on. It was developed as a single-page application using NextJS with TailwindCSS.",
 	},
