@@ -69,7 +69,7 @@ export default function Contact() {
 							</a>
 						</div>
 					</div>
-					<div className="mt-4 flex w-full items-center justify-center sm:mt-0 lg:justify-end">
+					<div className="mt-12 flex w-full items-center justify-center lg:mt-0 lg:justify-end">
 						<form
 							ref={formRef}
 							onSubmit={sendEmail}
