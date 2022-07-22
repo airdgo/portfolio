@@ -10,7 +10,7 @@ export default function Modal({ open, onClose, content }) {
 		>
 			<div
 				onClick={(e) => e.stopPropagation()}
-				className="relative my-4 grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
+				className="relative my-16 grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
 			>
 				<div>
 					<h1 className="mb-4 mr-8 text-2xl font-semibold xl:text-3xl">

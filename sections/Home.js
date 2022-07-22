@@ -21,7 +21,7 @@ export default function Home() {
 							</h2>
 						</div>
 
-						<h2 className="mt-32 mb-8 text-center text-lg text-primary2 sm:w-full sm:text-center sm:text-2xl lg:text-left lg:text-3xl xl:mt-44">
+						<h2 className="mt-32 mb-8 hidden text-center text-lg text-primary2 sm:w-full sm:text-center sm:text-2xl lg:block lg:text-left lg:text-3xl xl:mt-44">
 							And also a sports enthusiast
 						</h2>
 					</div>
