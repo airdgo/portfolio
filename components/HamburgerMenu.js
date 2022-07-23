@@ -1,7 +1,7 @@
 export default function HamburgerMenu({ onClick, isOpen }) {
 	return (
 		<button
-			className="h-10 w-8 lg:hidden"
+			className="h-7 w-7 lg:hidden flex justify-center items-center focus:outline focus:outline-1 focus:outline-primary2"
 			onClick={onClick}
 			aria-label="Toggle Menu"
 		>
