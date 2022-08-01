@@ -23,6 +23,7 @@ export default function Projects() {
 				<Image
 					alt={project.name}
 					src={project.imageSrc}
+					placeholder="blur"
 					layout="fill"
 					objectFit="cover"
 				/>
