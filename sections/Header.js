@@ -3,6 +3,7 @@ import HamburgerMenu from "../components/HamburgerMenu";
 import { useScrollPosition } from "../hooks";
 import Navigation from "../components/Navigation";
 import { classNames } from "../utils/index";
+import Link from "next/link";
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -28,14 +29,15 @@ export default function Header() {
 			/>
 			<nav className="relative mx-auto my-0 flex h-full w-[85%] max-w-[90rem] flex-col items-center justify-between font-medium lg:flex-row">
 				<div className="relative z-40 flex h-14 w-full items-center justify-between">
-					<div className="text-lg lg:text-xl" onClick={hideMenu}>
-						<a
-							href="#"
-							title="Home"
-							className="focus:outline focus:outline-1 focus:outline-primary2"
-						>
-							HOME
-						</a>
+					<div onClick={hideMenu}>
+						<Link href="/">
+							<a
+								title="Home"
+								className="focus:outline focus:outline-1 focus:outline-primary2"
+							>
+								HOME
+							</a>
+						</Link>
 					</div>
 					<HamburgerMenu onClick={toggleMenu} isOpen={isOpen} />
 				</div>

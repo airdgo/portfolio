@@ -1,5 +1,6 @@
 import { navigation, externalLinks } from "../constants";
 import { classNames } from "../utils";
+import Link from "next/link";
 
 export default function Navigation({ onClick, isOpen }) {
 	return (
@@ -11,14 +12,11 @@ export default function Navigation({ onClick, isOpen }) {
 		>
 			{[...navigation, ...externalLinks].map((nav) => (
 				<li key={nav.title} onClick={onClick}>
-					<a
-						href={nav.link}
-						title={nav.title}
-						className={nav.class}
-						target={nav?.target}
-					>
-						{nav.content}
-					</a>
+					<Link href={nav.link}>
+						<a title={nav.title} className={nav.class} target={nav?.target}>
+							{nav.content}
+						</a>
+					</Link>
 				</li>
 			))}
 		</ul>

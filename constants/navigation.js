@@ -1,5 +1,4 @@
 import { LinkedInIcon, GithubIcon } from "../icons/index";
-import { classNames } from "../utils";
 
 const focusStyle = "focus:outline-none focus:underline hover:underline";
 
