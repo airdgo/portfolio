@@ -11,6 +11,8 @@ export default function Contact() {
 	const formRef = useRef();
 	const [isVisible, setIsVisible] = useState(false);
 	const [loading, setLoading] = useState(false);
+	const [error, setError] = useState(false);
+	const alertMessage = error ? "Ups! Something went wrong!" : "Thank you!";
 
 	function displayAlert() {
 		setIsVisible(true);
@@ -29,6 +31,7 @@ export default function Contact() {
 
 		try {
 			setLoading(true);
+			setError(false);
 			await emailjs.sendForm(
 				SERVICE_ID,
 				TEMPLATE_ID,
@@ -36,10 +39,11 @@ export default function Contact() {
 				PUBLIC_KEY
 			);
 			formRef.current.reset();
-			displayAlert();
 		} catch (error) {
-			console.log(error.text);
+			console.error(error.text);
+			setError(true);
 		}
+		displayAlert();
 		setLoading(false);
 	}
 
@@ -92,7 +96,9 @@ export default function Contact() {
 							</button>
 						</form>
 					</div>
-					<Alert visible={isVisible}>Thank you!</Alert>
+					<Alert visible={isVisible} error={error}>
+						{alertMessage}
+					</Alert>
 				</Container>
 			</Section>
 			<section className="relative z-[2]">
