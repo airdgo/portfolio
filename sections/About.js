@@ -34,10 +34,7 @@ export default function About() {
 							/>
 
 							<p className="mt-4 max-w-xl text-sm text-neutralLight md:mt-6 md:text-base lg:mt-8">
-								I am a solution oriented Frontend Web Developer based in
-								Cluj-Napoca, Romania. Being a lifelong learner, I am eager to
-								take on programming and design challenges that will provide a
-								lasting impact on user experience.
+							  As a Full Stack Developer, I thrive on challenges, crafting innovative solutions across the web development spectrum. Eager to learn and adaptable to new technologies, I bring a dynamic approach to creating robust, user-centric digital experiences. Let's build the future together.
 							</p>
 						</div>
 						<div className="flex items-center md:text-lg">
