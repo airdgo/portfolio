@@ -16,7 +16,7 @@ export default function Home() {
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal lg:text-left">
 							<h1>Hi, I'm Vlad.</h1>
 							<h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-normal">
-								A <span className="text-accent1"> Frontend </span>
+								A <span className="text-accent1"> Full Stack </span>
 								Developer
 							</h2>
 						</div>
