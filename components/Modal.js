@@ -34,16 +34,18 @@ export default function Modal({ open, onClose, content }) {
 							<DemoIcon />
 							Demo
 						</a>
-						<a
-							title="Code"
-							href={content.code}
-							target="_blank"
-							rel="noreferrer"
-							className="ml-4 flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
-						>
-							<CodeIcon />
-							Code
-						</a>
+						{
+							content.code && <a
+								title="Code"
+								href={content.code}
+								target="_blank"
+								rel="noreferrer"
+								className="ml-4 flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
+							>
+								<CodeIcon />
+								Code
+							</a>
+						}
 					</div>
 				</div>
 

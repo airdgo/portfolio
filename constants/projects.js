@@ -1,6 +1,6 @@
 import weatherApp from "../assets/images/weather-app.png";
 import flightEnvelope from "../assets/images/flight-envelope.png";
-import truyou from "../assets/images/truyou.png";
+import birdshouse from "../assets/images/birds-house.png";
 import artificialHorizon from "../assets/images/artificial-horizon.png";
 import rateAllTheMusic from "../assets/images/rate-all-the-music.png";
 import vladDragoi from "../assets/images/vlad-dragoi.png";
@@ -8,13 +8,12 @@ import vladDragoi from "../assets/images/vlad-dragoi.png";
 export const projects = [
 	{
 		id: 5,
-		name: "TRUYOU",
-		imageSrc: truyou,
-		demo: "https://main.dsi65lfef110r.amplifyapp.com/",
-		code: "https://github.com/airdgo/truyou",
-		technologies: ["ReactJS", "TailwindCSS", "Redux", "AWS", "ChartJS"],
+		name: "BIRDS HOUSE",
+		imageSrc: birdshouse,
+		demo: "https://www.birdshouse.ro/",
+		technologies: ["NextJS", "TailwindCSS"],
 		about:
-			"Alongside a web designer and a project manager, I am now working on a full stack social media web application called TruYou. Users can register, publish their feelings once every day, and after a week, a visual representation of the user’s emotions will show up.",
+			"Developed a dynamic website from inception to completion using NextJS and Tailwind CSS. Showcasing a mountain cabin with stunning photos of the interior and exterior, the site enables users to explore activities and easily contact the owner for bookings.",
 	},
 	{
 		id: 4,
@@ -24,7 +23,7 @@ export const projects = [
 		code: "https://github.com/crstern/Rate-all-the-music",
 		technologies: ["ReactJS", "Docker", "CSS"],
 		about:
-			"RATM is a web application that allows users to evaluate artists and their albums, provide comments, and import new artists after creating an account. I collaborated on this project with a backend developer, and my role was to create and implement the UI/UX using ReactJS and CSS.",
+			"Teamed up with a backend developer to bring RATM to life. Led the design and implementation of the user interface/experience using ReactJS and CSS, ensuring a seamless and engaging platform for artist and album evaluations.",
 	},
 	{
 		id: 3,
@@ -34,7 +33,7 @@ export const projects = [
 		code: "https://github.com/airdgo/Weather-App",
 		technologies: ["JavaScript", "SASS", "API"],
 		about:
-			"This app shows the temperature for the next six hours as well as the humidity, wind speed, how the temperature feels, maximum and lowest temperatures, UV index, visibility, and pressure for a specified area over the next eight days. Additionally, the user has the option to store a favorite place and view it without having to type its name.",
+			"This app provides a comprehensive weather forecast, displaying temperature, humidity, wind speed, 'feels-like' temperature, max and min temperatures, UV index, visibility, and pressure for a chosen area over the next eight days. Users can conveniently save favorite locations for quick access without manual input.",
 	},
 	{
 		id: 2,
@@ -44,7 +43,7 @@ export const projects = [
 		code: "https://github.com/airdgo/flight-envelope",
 		technologies: ["ReactJS", "TailwindCSS", "PlotlyJS"],
 		about:
-			"This is a web app that aims to help students and engineers by plotting the flight envelope for a military or civil aircaft. Furthermore, the user has the option to alter the diagram's color and save it to their personal computer.",
+			"This web app assists students and engineers in plotting the flight envelope for military or civil aircraft. Users can customize the diagram's color and save it to their personal computer for convenience.",
 	},
 	{
 		id: 1,
@@ -54,7 +53,7 @@ export const projects = [
 		code: "https://github.com/airdgo/ArtificialHorizon",
 		technologies: ["Python", "Pygame", "Sockets", "FlightGear"],
 		about:
-			"This is a Python application that displays how the artificial horizon operates in the aircraft cockpit using data from a flight simulator. I created the data using FlightGear Flight Simulator, retrieved it with sockets, and displayed it as a flight instrument using Pygame.",
+			"This Python application showcases the operation of the artificial horizon in an aircraft cockpit. I generated the data using FlightGear Flight Simulator, retrieved it through sockets, and presented it as a flight instrument using Pygame.",
 	},
 	{
 		id: 0,
@@ -64,6 +63,6 @@ export const projects = [
 		code: "https://github.com/airdgo/portofolio",
 		technologies: ["NextJS", "TailwindCSS"],
 		about:
-			"This is my personal website where I showcase my skills and accomplishments as well as the projects I have been working on. It was developed as a single-page application using NextJS with TailwindCSS.",
+			"This is my personal website, a dynamic showcase of my skills, achievements, and current projects. Crafted as a sleek single-page application, it harnesses the power of NextJS and TailwindCSS for a seamless blend of functionality and design.",
 	},
 ];
