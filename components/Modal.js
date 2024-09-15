@@ -23,24 +23,26 @@ export default function Modal({ open, onClose, content }) {
 							className="rounded-md"
 						/>
 					</div>
-					<div className="mt-2 flex items-center">
-						<a
-							title="Live Site"
-							href={content.demo}
-							target="_blank"
-							rel="noreferrer"
-							className="flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
-						>
-							<DemoIcon />
-							Demo
-						</a>
+					<div className="mt-2 flex items-center gap-4">
+						{
+							content.demo && <a
+								title="Live Site"
+								href={content.demo}
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
+							>
+								<DemoIcon />
+								Demo
+							</a>
+						}
 						{
 							content.code && <a
 								title="Code"
 								href={content.code}
 								target="_blank"
 								rel="noreferrer"
-								className="ml-4 flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
+								className="flex items-center text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
 							>
 								<CodeIcon />
 								Code
