@@ -12,10 +12,8 @@ export default function Navigation({ onClick, isOpen }) {
 		>
 			{[...navigation, ...externalLinks].map((nav) => (
 				<li key={nav.title} onClick={onClick}>
-					<Link href={nav.link}>
-						<a title={nav.title} className={nav.class} target={nav?.target}>
-							{nav.content}
-						</a>
+					<Link href={nav.link} title={nav.title} className={nav.class} target={nav?.target}>
+						{nav.content}
 					</Link>
 				</li>
 			))}

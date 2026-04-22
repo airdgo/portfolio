@@ -24,8 +24,8 @@ export default function Projects() {
 					alt={project.name}
 					src={project.imageSrc}
 					placeholder="blur"
-					layout="fill"
-					objectFit="cover"
+					fill
+					className="object-cover"
 				/>
 				<div className="absolute inset-0 grid h-full w-full cursor-pointer place-items-center bg-[#1d1d1fb3] px-2 text-center font-primary text-primary2 opacity-0 transition-all duration-500 ease-in-out hover:opacity-100">
 					<div className="text-3xl font-medium md:font-bold lg:text-4xl">

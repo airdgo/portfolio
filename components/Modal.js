@@ -20,7 +20,7 @@ export default function Modal({ open, onClose, content }) {
 						<Image
 							src={content.imageSrc}
 							alt={content.name}
-							className="rounded-md"
+							className="rounded-md w-full h-auto"
 						/>
 					</div>
 					<div className="mt-2 flex items-center gap-4">
