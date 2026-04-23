@@ -16,13 +16,13 @@ export default function Home() {
 						<div className="text-center text-3xl font-bold sm:text-4xl md:text-6xl md:leading-normal lg:text-left">
 							<h1>Hi, I'm Vlad.</h1>
 							<h2 className="text-2xl sm:text-3xl md:text-5xl md:leading-normal">
-								A <span className="text-accent1"> Full Stack </span>
-								Developer
+								A <span className="text-accent1"> Software </span>
+								Engineer
 							</h2>
 						</div>
 
 						<h2 className="mt-32 mb-8 hidden text-center text-lg text-primary2 sm:w-full sm:text-center sm:text-2xl lg:block lg:text-left lg:text-3xl xl:mt-44">
-							And also a sports enthusiast
+							Web, mobile or cloud, I am there.
 						</h2>
 					</div>
 
