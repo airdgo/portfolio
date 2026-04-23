@@ -1,9 +1,31 @@
 import flightEnvelope from "../assets/images/flight-envelope.png";
 import birdshouse from "../assets/images/birds-house.png";
 import artificialHorizon from "../assets/images/artificial-horizon.png";
-import plantkeeper from "../assets/images/plantkeeper.png"
+import plantkeeper from "../assets/images/plantkeeper.png";
+import gatadezbor from "../assets/images/gata-de-zbor.png";
+import skiro from "../assets/images/skiro.png";
 
 export const projects = [
+	{
+		id: 6,
+		name: "SKIRO",
+		imageSrc: skiro,
+		appStore: "https://apps.apple.com/gb/app/skiro/id6756579006",
+		playStore: "https://play.google.com/store/apps/details?id=com.straja.app",
+		technologies: ["React Native", "Expo", "FastAPI", "PostgreSQL", "Mapbox", "ESP32"],
+		about:
+			"Real-time ski resort app serving Straja and Pasul Vulcan with 3,000+ downloads on iOS and Android. Features interactive Mapbox trail maps, offline-first architecture, and multi-language support. Designed and deployed 15 custom ESP32 IoT devices on ski lifts for live status monitoring with heartbeat tracking and OTA firmware updates.",
+	},
+	{
+		id: 5,
+		name: "GATA DE ZBOR",
+		imageSrc: gatadezbor,
+		code: "https://github.com/airdgo/gata-de-zbor",
+		appStore: "https://apps.apple.com/ro/app/gata-de-zbor/id6762507279",
+		technologies: ["React Native", "Expo", "TypeScript", "Zustand", "NativeWind"],
+		about:
+			"An offline-first exam prep app for Romanian paragliding pilots. Full exam simulations, category practice, and flashcard review — built with React Native and Expo.",
+	},
 	{
 		id: 4,
 		name: "PLANTKEEPER",

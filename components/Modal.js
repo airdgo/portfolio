@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
-import { DemoIcon, CodeIcon, CloseModalIcon } from "../icons";
+import { DemoIcon, CodeIcon, CloseModalIcon, AppStoreIcon, PlayStoreIcon } from "../icons";
 
 export default function Modal({ open, onClose, content }) {
 	const modalRef = useRef(null);
@@ -77,6 +77,30 @@ export default function Modal({ open, onClose, content }) {
 							>
 								<DemoIcon />
 								Demo
+							</a>
+						)}
+						{content.appStore && (
+							<a
+								title="App Store"
+								href={content.appStore}
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center gap-1 text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
+							>
+								<AppStoreIcon />
+								App Store
+							</a>
+						)}
+						{content.playStore && (
+							<a
+								title="Google Play"
+								href={content.playStore}
+								target="_blank"
+								rel="noreferrer"
+								className="flex items-center gap-1 text-neutralLighter hover:text-inherit focus:outline focus:outline-1 focus:outline-primary2"
+							>
+								<PlayStoreIcon />
+								Google Play
 							</a>
 						)}
 						{content.code && (
