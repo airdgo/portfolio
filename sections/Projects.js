@@ -5,19 +5,37 @@ import Image from "next/image";
 import ProjectWraper from "../components/ProjectWraper";
 import { projects } from "../constants";
 import Modal from "../components/Modal";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Projects() {
 	const [isOpen, setIsOpen] = useState(false);
 	const [modalContent, setModalContent] = useState({});
+	const triggerRef = useRef(null);
+
+	function openModal(project, e) {
+		triggerRef.current = e.currentTarget;
+		setModalContent(project);
+		setIsOpen(true);
+	}
+
+	function closeModal() {
+		setIsOpen(false);
+		triggerRef.current?.focus();
+	}
 
 	const renderProjects = (projects) =>
 		projects.map((project) => (
 			<ProjectWraper
 				key={project.id}
-				onClick={() => {
-					setModalContent(project);
-					setIsOpen(true);
+				role="button"
+				tabIndex="0"
+				aria-label={`View ${project.name}`}
+				onClick={(e) => openModal(project, e)}
+				onKeyDown={(e) => {
+					if (e.key === "Enter" || e.key === " ") {
+						e.preventDefault();
+						openModal(project, e);
+					}
 				}}
 			>
 				<Image
@@ -27,7 +45,7 @@ export default function Projects() {
 					fill
 					className="object-cover"
 				/>
-				<div className="absolute inset-0 grid h-full w-full cursor-pointer place-items-center bg-[#1d1d1fb3] px-2 text-center font-primary text-primary2 opacity-0 transition-all duration-500 ease-in-out hover:opacity-100">
+				<div className="absolute inset-0 grid h-full w-full cursor-pointer place-items-center bg-[#1d1d1fb3] px-2 text-center font-primary text-primary2 opacity-0 transition-all duration-500 ease-in-out hover:opacity-100 focus-within:opacity-100">
 					<div className="text-3xl font-medium md:font-bold lg:text-4xl">
 						{project.name}
 					</div>
@@ -53,7 +71,7 @@ export default function Projects() {
 					<Modal
 						open={isOpen}
 						content={modalContent}
-						onClose={() => setIsOpen(false)}
+						onClose={closeModal}
 					/>
 				</Container>
 			</Section>

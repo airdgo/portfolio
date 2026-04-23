@@ -1,14 +1,56 @@
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { DemoIcon, CodeIcon, CloseModalIcon } from "../icons";
 
 export default function Modal({ open, onClose, content }) {
+	const modalRef = useRef(null);
+	const closeButtonRef = useRef(null);
+
+	useEffect(() => {
+		if (!open) return;
+
+		closeButtonRef.current?.focus();
+
+		const handleKeyDown = (e) => {
+			if (e.key === "Escape") {
+				onClose();
+				return;
+			}
+
+			if (e.key === "Tab") {
+				const focusable = modalRef.current?.querySelectorAll(
+					'a[href], button, [tabindex]:not([tabindex="-1"])'
+				);
+				if (!focusable?.length) return;
+				const first = focusable[0];
+				const last = focusable[focusable.length - 1];
+
+				if (e.shiftKey && document.activeElement === first) {
+					e.preventDefault();
+					last.focus();
+				} else if (!e.shiftKey && document.activeElement === last) {
+					e.preventDefault();
+					first.focus();
+				}
+			}
+		};
+
+		document.addEventListener("keydown", handleKeyDown);
+		return () => document.removeEventListener("keydown", handleKeyDown);
+	}, [open, onClose]);
+
 	if (!open) return null;
+
 	return (
 		<div
 			onClick={onClose}
 			className="fixed top-0 left-0 z-[200] grid h-screen w-full place-items-center overflow-auto bg-[#1d1d1fb3] text-primary2"
+			aria-modal="true"
+			role="dialog"
+			aria-label={content.name}
 		>
 			<div
+				ref={modalRef}
 				onClick={(e) => e.stopPropagation()}
 				className="relative my-16 grid w-[85%] max-w-5xl bg-primaryDark px-4 py-4 font-primary sm:px-12 sm:py-8 lg:grid-cols-2 lg:px-20 lg:py-12"
 			>
@@ -25,8 +67,8 @@ export default function Modal({ open, onClose, content }) {
 						/>
 					</div>
 					<div className="mt-2 flex items-center gap-4">
-						{
-							content.demo && <a
+						{content.demo && (
+							<a
 								title="Live Site"
 								href={content.demo}
 								target="_blank"
@@ -36,9 +78,9 @@ export default function Modal({ open, onClose, content }) {
 								<DemoIcon />
 								Demo
 							</a>
-						}
-						{
-							content.code && <a
+						)}
+						{content.code && (
+							<a
 								title="Code"
 								href={content.code}
 								target="_blank"
@@ -48,7 +90,7 @@ export default function Modal({ open, onClose, content }) {
 								<CodeIcon />
 								Code
 							</a>
-						}
+						)}
 					</div>
 				</div>
 
@@ -76,8 +118,10 @@ export default function Modal({ open, onClose, content }) {
 					</p>
 				</div>
 				<button
-					className="absolute right-4 top-4 focus:outline focus:outline-1 focus:outline-primary2 sm:right-12 sm:top-8 lg:top-12 lg:right-20"
+					ref={closeButtonRef}
+					className="absolute right-4 top-4 focus-visible:outline focus-visible:outline-1 focus-visible:outline-primary2 sm:right-12 sm:top-8 lg:top-12 lg:right-20"
 					onClick={onClose}
+					aria-label="Close"
 				>
 					<CloseModalIcon />
 				</button>
