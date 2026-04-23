@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
 				{/* Open Graph */}
 				<meta property="og:type" content="website" />
 				<meta property="og:url" content={URL} />
-				<meta property="og:title" content="Vlad Dragoi — Full Stack Developer" />
+				<meta property="og:title" content="Vlad Dragoi — Software Engineer" />
 				<meta property="og:description" content="Software engineer building across web, mobile, and cloud." />
 				<meta property="og:image" content={`${URL}/og-image.png`} />
 				<meta property="og:image:width" content="1200" />
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 
 				{/* Twitter */}
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:title" content="Vlad Dragoi — Full Stack Developer" />
+				<meta name="twitter:title" content="Vlad Dragoi — Software Engineer" />
 				<meta name="twitter:description" content="Software engineer building across web, mobile, and cloud." />
 				<meta name="twitter:image" content={`${URL}/og-image.png`} />
 			</Head>
