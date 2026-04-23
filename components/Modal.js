@@ -20,6 +20,7 @@ export default function Modal({ open, onClose, content }) {
 						<Image
 							src={content.imageSrc}
 							alt={content.name}
+							placeholder="blur"
 							className="rounded-md w-full h-auto"
 						/>
 					</div>
